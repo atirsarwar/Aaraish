@@ -1,0 +1,83 @@
+@media (max-width: 991.98px) {
+  .ideas-menu {
+    text-align: left;
+  }
+  .ideas-navbar .navbar-collapse {
+    background: #fff;
+    padding-bottom: 10px;
+    margin-top: 8px;
+  }
+}
+
+/* Hide scroll bar for nav if is overflown, show neat wrap */
+@media (max-width: 1199.98px) {
+  .ideas-menu {
+    flex-wrap: wrap;
+  }
+  .ideas-menu .nav-link {
+    margin-right: 4px;
+    margin-left: 4px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+    .card-img, .custom-card {
+        height: 250px;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .card-img, .custom-card {
+        height: 180px;
+    }
+    h4 {
+        font-size: 0.9rem;
+    }
+    .container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+  .product-image-wrapper,
+  .product-image-wrapper img {
+    height: 260px;
+    min-height: 260px;
+  }
+}
+@media (max-width: 768px) {
+  .product-image-wrapper,
+  .product-image-wrapper img {
+    height: 200px;
+    min-height: 200px;
+  }
+  .btn-outline-secondary {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sale-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width : 320px){
+  .content .name {
+    font-size: 20px !important;
+  }
+
+  .content .des {
+    font-size: 14px;
+    width: 30%
+  }
+
+  .content button {
+    padding: 5px 3px !important;
+    font-size: 15px !important;
+  }
+}
+

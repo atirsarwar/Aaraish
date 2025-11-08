@@ -1,0 +1,373 @@
+
+*{
+    transition: 0.5s;
+}
+
+body{
+    background-image: url(https://gulahmed.com/wp/wp-content/themes/gulahmed/images/bg-pattern.png);
+}
+
+/* card 1 */
+.flowercard1{
+    border: 3px solid #e5e5e5;
+    background-color: #fff;
+    border-radius: 0 50px;
+    width: 240px;
+    height: 240px;
+    left: 20%;
+    position: relative;
+    overflow: hidden;
+}
+
+.subcard1{
+    border: 3px solid #e5e5e5;
+    background: url(../images/index1.jpg);
+    border-radius: 0 50px;
+    width: 200px;
+    height: 200px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    overflow: hidden;
+    left: 16%;
+}
+
+.headingincard1{
+    width: 100%;
+    height: 20%;
+    background-color:#6E1E28;
+    color: #fff;
+    position: relative;
+    bottom: 0%;
+    top: 80%;
+    border-radius: 0px 50px ;
+}
+
+.innerbtn1{
+    height: 25%;
+    width: 70%;
+    background-color: #6E1E28;
+    border-radius: 0px 25px;
+    border: 3px solid white;
+    color: white;
+    display: none;
+}
+
+.innerbtn1 h2 {
+    margin-top: 2%;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.flowercard1:hover .subcard1{
+transform: translate(100%,100%);
+}
+
+.flowercard1:hover {
+    background-color: #6E1E28;
+    border: 3px solid #6E1E28;
+    
+}
+
+.flowercard1:hover .innerbtn1{
+    display: block;
+
+}
+
+.innerbtn1:hover{
+    background-color: white;
+    border: 3px solid #6E1E28;
+    color: #6E1E28;
+}
+/* card 2 */
+
+.flowercard2{
+    border: 3px solid #e5e5e5;
+    background-color: #fff;
+    border-radius: 50px 0px;
+    width: 240px;
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.subcard2{
+    border: 3px solid #e5e5e5;
+    background: url(../images/index4.jpg);
+    border-radius: 50px 0px;
+    width: 200px;
+    height: 200px;
+    right: 16%;
+    bottom: 0px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.headingincard2{
+    width: 100%;
+    height: 20%;
+    background-color:#C7A56C;
+    color: #fff;
+    position: relative;
+    bottom: 0%;
+    top: 80%;
+    border-radius: 50px 0px ;
+}
+
+.innerbtn2{
+    height: 25%;
+    width: 70%;
+    background-color: #C7A56C;
+    border-radius: 25px 0px;
+    border: 3px solid white;
+    color: white;
+    display: none;
+}
+
+.innerbtn2 h2 {
+    margin-top: 2%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.flowercard2:hover .subcard2{
+transform: translate(-100%,100%);
+}
+
+.flowercard2:hover {
+    background-color: #C7A56C;
+    border: 3px solid #C7A56C;
+    
+}
+
+.flowercard2:hover .innerbtn2{
+    display: block;
+}
+
+.innerbtn2:hover{
+    background-color: white;
+    border: 3px solid #C7A56C;
+    color: #C7A56C;
+}
+/* card 3 */
+
+.flowercard3{
+    border: 3px solid #e5e5e5;
+    background-color: #fff;
+    border-radius: 50px 0px;
+    width: 240px;
+    height: 240px;
+    left: 20%;
+    position: relative;
+    overflow: hidden;
+}
+
+.subcard3{
+    border: 3px solid #e5e5e5;
+    background: url(../images/index2.jpg);
+    border-radius: 50px 0px;
+    width: 200px;
+    height: 200px;
+    right: 0px;
+    bottom: 15%;
+    position: absolute;
+    overflow: hidden;
+    left: 16%;
+}
+
+.headingincard3{
+    width: 100%;
+    height: 20%;
+    background-color:#6B5846;
+    color: #fff;
+    position: relative;
+    bottom: 0%;
+    top: 80%;
+    border-radius: 50px 0px ;
+}
+
+.innerbtn3{
+    height: 25%;
+    width: 70%;
+    background-color: #6B5846;
+    border-radius: 0px 25px;
+    border: 3px solid white;
+    color: white;
+    display: none;
+}
+
+.innerbtn3 h2 {
+    margin-top: 6%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.flowercard3:hover .subcard3{
+transform: translate(100%,-100%);
+}
+
+.flowercard3:hover {
+    background-color: #6B5846;
+    border: 3px solid #6B5846;
+    
+}
+
+.flowercard3:hover .innerbtn3{
+    display: block;
+}
+
+.innerbtn3:hover{
+    background-color: white;
+    border: 3px solid #6B5846;
+    color: #6B5846;
+}
+/* card 4 */
+.flowercard4{
+    border: 3px solid #e5e5e5;
+    background-color: #fff;
+    border-radius: 0px 50px;
+    width: 240px;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+.subcard4{
+    border: 3px solid #e5e5e5;
+    background: url(../images/index3.jpg);
+    border-radius: 0 50px;
+    width: 200px;
+    height: 200px;
+    right: 16%;
+    bottom: 15%;
+    position: absolute;
+    overflow: hidden;
+    
+}
+
+.headingincard4{
+    width: 100%;
+    height: 20%;
+    background-color:#6B6B6B;
+    color: #fff;
+    position: relative;
+    bottom: 0%;
+    top: 80%;
+    border-radius: 0px 50px ;
+}
+
+.innerbtn4{
+    height: 25%;
+    width: 70%;
+    background-color: #6B6B6B;
+    border-radius: 25px 0px;
+    border: 3px solid white;
+    color: white;
+    display: none;
+}
+
+.innerbtn4 h2 {
+    margin-top: 2%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.flowercard4:hover .subcard4{
+transform: translate(-100%,-100%);
+}
+
+.flowercard4:hover {
+    background-color: #6B6B6B;
+    border: 3px solid #6B6B6B;
+    
+}
+
+.flowercard4:hover .innerbtn4{
+    display: block;
+}
+
+.innerbtn4:hover{
+    background-color: white;
+    border: 3px solid #6B6B6B;
+    color: #6B6B6B;
+}
+
+.innerbtn1, .innerbtn2, .innerbtn3, .innerbtn4 {
+    text-decoration: none;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerbtn1 h2, .innerbtn2 h2, .innerbtn3 h2, .innerbtn4 h2 {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ===========================
+   PREMIUM GULAHMED-STYLE PRELOADER
+   =========================== */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffffff, #e6f3ff, #fdfdfd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.loader-logo {
+  width: 120px;
+  height: auto;
+  opacity: 0;
+  animation: logoFade 2s ease-in-out forwards;
+}
+
+.loading-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #6E1E28;
+  opacity: 0;
+  animation: textFade 3s ease-in-out forwards 2s;
+}
+
+/* Animations */
+@keyframes logoFade {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes textFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Hide preloader after finish */
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+

@@ -1,0 +1,46 @@
+
+@media(max-width:1024px){
+    .mrg{
+        margin-left: 20%;
+    }
+
+}
+
+@media(max-width:425px){ 
+    .mrg{
+        left: 0%;
+    }
+    
+    .mrg2{
+        left: 0%;
+    }
+    
+    .container-xl{
+        width: 90% !important;
+    }
+
+}
+
+@media(min-width:2560px){ 
+    .container-xl{
+        width: 28% !important;
+    }
+
+    .flowercard1{
+        left: 10%;
+    }
+}
+
+@media(max-width:320px){ 
+    .flowercard1{
+        left: 10% !important;
+    }
+
+     .mrg{
+        margin-left: 10%;
+    }
+
+    .flowercard3{
+        left: 10% !important;
+    }
+}
