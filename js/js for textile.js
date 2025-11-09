@@ -88,3 +88,21 @@ window.addEventListener("load", () => {
     }, 800);
   }, 4000);
 });
+
+// Scroll animation function
+function animateOnScroll() {
+  const elements = document.querySelectorAll('.scroll-animate');
+  
+  elements.forEach(element => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+    
+    if (elementPosition < screenPosition) {
+      element.classList.add('animated');
+    }
+  });
+}
+
+// Initialize scroll animation
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
