@@ -16,6 +16,57 @@
     </div>
   </div>
 
+<!-- Sticky Navigation -->
+<nav class="navbar navbar-expand-lg bg-white py-3 sticky-nav" id="stickyNav">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="ideasNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
+         <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
+          <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
+          <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
+          <li class="nav-item"><a class="nav-link active" href="women.html">WOMEN</a></li>
+          <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
+          <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
+          <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3 ideas-icons">
+          <!-- Search Icon -->
+          <a href="#" class="text-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+          <!-- User Icon -->
+          <a href="#" class="text-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M21 20c0-4.418-3.582-8-8-8s-8 3.582-8 8"></path>
+            </svg>
+          </a>
+          <!-- Cart Icon -->
+          <a href="#" class="position-relative text-dark" id="cartIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="cart-count">
+              0
+            </span>
+          </a>
+        </div>
+      </div>
+  </div>
+</nav>
+
+<!-- Original Navigation -->
 <nav class="navbar navbar-expand-lg bg-white py-3">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
@@ -50,13 +101,13 @@
             </svg>
           </a>
           <!-- Cart Icon -->
-          <a href="#" class="position-relative text-dark">
+          <a href="#" class="position-relative text-dark" id="cartIconMain">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <circle cx="9" cy="21" r="1"></circle>
               <circle cx="20" cy="21" r="1"></circle>
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="cart-count">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="cart-count-main">
               0
             </span>
           </a>
@@ -65,6 +116,27 @@
   </div>
 </nav>
 
+<!-- Cart Modal -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-modal" id="cartModal">
+  <div class="cart-header">
+    <h3 class="cart-title">Your Shopping Cart</h3>
+    <button class="close-cart" id="closeCart">&times;</button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <!-- Cart items will be dynamically inserted here -->
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cartTotal">Rs. 0</span>
+    </div>
+    <div class="cart-actions">
+      <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+      <button class="btn-continue" id="continueShopping">Continue Shopping</button>
+    </div>
+  </div>
+</div>
 
 <section class="container">
     <div class="row gy-4 py-5">
@@ -75,7 +147,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">3 Piece Embroidered Lawn Suit With Chiffon Dupatta WNS-52011</h6>
                     <p class="card-text mb-2">Rs. 3,790</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-1">Qty:</label>
+                            <select id="quantity-1">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="1" data-name="3 Piece Embroidered Lawn Suit With Chiffon Dupatta WNS-52011" data-price="3790" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Khaddar-Dupatta-Printed-Khaddar-Shirt-Dyed-Trouser-Gulahmed-WNS-52068-Front-White.jpg?v=1761215599">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -86,7 +170,19 @@
                 <div class="card-body d-flex flex-column">
                   <h6 class="card-title">Digital Printed Khaddar Suit With Wool Shawl WNS-52023</h6>
                   <p class="card-text mb-2">Rs. 9,990</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                  <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-2">Qty:</label>
+                            <select id="quantity-2">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="2" data-name="Digital Printed Khaddar Suit With Wool Shawl WNS-52023" data-price="9990" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Khaddar-Dupatta-Printed-Khaddar-Shirt-Dyed-Trouser-Gulahmed-WNS-52062-Front-White.jpg?v=1761215673">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -97,7 +193,19 @@
                 <div class="card-body d-flex flex-column">
                      <h6 class="card-title">Luxury Jacquard 3 Piece Suit With Dupatta WNS-52034</h6>
                      <p class="card-text mb-2">Rs. 7,990</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                     <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-3">Qty:</label>
+                            <select id="quantity-3">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="3" data-name="Luxury Jacquard 3 Piece Suit With Dupatta WNS-52034" data-price="7990" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Khaddar-Dupatta-Printed-Khaddar-Shirt-Dyed-Trouser-Gulahmed-WNS-52069-Front-White.jpg?v=1761215589">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -108,7 +216,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Embroidered Cambric Suit With Printed Dupatta WNS-52045</h6>
                     <p class="card-text mb-2">Rs. 9,490</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-4">Qty:</label>
+                            <select id="quantity-4">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="4" data-name="Embroidered Cambric Suit With Printed Dupatta WNS-52045" data-price="9490" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Khaddar-Dupatta-Printed-Khaddar-Shirt-Dyed-Trouser-Gulahmed-WNS-52066-Front-White.jpg?v=1761215642">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -119,7 +239,19 @@
                 <div class="card-body d-flex flex-column">
                      <h6 class="card-title">Embroidered Cambric Suit With Printed Dupatta WNS-52045</h6>
                      <p class="card-text mb-2">Rs. 6,293</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                     <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-5">Qty:</label>
+                            <select id="quantity-5">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="5" data-name="Embroidered Cambric Suit With Printed Dupatta WNS-52045" data-price="6293" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Cotton-Linen-Dupatta-Printed-Cotton-Linen-Shirt-Dyed-Trouser-Gulahmed-WNS-52057-Front-White.jpg?v=1761215089">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -130,7 +262,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Printed Linen Suit With Wool Shawl WNS-52056</h6>
                     <p class="card-text mb-2">Rs. 2,394</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-6">Qty:</label>
+                            <select id="quantity-6">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="6" data-name="Printed Linen Suit With Wool Shawl WNS-52056" data-price="2394" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Khaddar-Dupatta-Printed-Khaddar-Shirt-Dyed-Trouser-Gulahmed-WNS-52065-Front-White.jpg?v=1761215650">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -141,7 +285,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Regular Fit Basic Suits SK‑BSC25‑094</h6>
                     <p class="card-text mb-2">Rs. 9,490</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-7">Qty:</label>
+                            <select id="quantity-7">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="7" data-name="Regular Fit Basic Suits SK‑BSC25‑094" data-price="9490" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Khaddar-Dupatta-Printed-Khaddar-Shirt-Dyed-Trouser-Gulahmed-WNS-52064-Front-White.jpg?v=1761215658">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -152,7 +308,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Regular Fit Basic Suits SK‑BSC25‑037</h6>
                     <p class="card-text mb-2">Rs. 6,990</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-8">Qty:</label>
+                            <select id="quantity-8">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="8" data-name="Regular Fit Basic Suits SK‑BSC25‑037" data-price="6990" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Khaddar-Dupatta-Printed-Khaddar-Shirt-Dyed-Trouser-Gulahmed-WNS-52063-Front-White.jpg?v=1761215665">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -163,7 +331,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Regular Fit Styling Suits SK‑STY25‑063</h6>
                     <p class="card-text mb-2">Rs. 6,993</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-9">Qty:</label>
+                            <select id="quantity-9">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="9" data-name="Regular Fit Styling Suits SK‑STY25‑063" data-price="6993" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Khaddar-Dupatta-Printed-Khaddar-Shirt-Dyed-Trouser-Gulahmed-WNS-52061-Front-White.jpg?v=1761215753">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -174,7 +354,19 @@
                 <div class="card-body d-flex flex-column">
                      <h6 class="card-title">Regular Fit Sweater MN‑SWT‑WS25‑046 A</h6>
                      <p class="card-text mb-2">Rs. 5,243</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                     <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-10">Qty:</label>
+                            <select id="quantity-10">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="10" data-name="Regular Fit Sweater MN‑SWT‑WS25‑046 A" data-price="5243" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Rod-Viscose-Shirt-Printed-Trouser-Gulahmed-WNST-52008-Front.jpg?v=1761216633">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -185,7 +377,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Regular Fit Pullover Hoodie MN‑POH‑WS25‑003</h6>
                     <p class="card-text mb-2">Rs. 4,543</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-11">Qty:</label>
+                            <select id="quantity-11">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="11" data-name="Regular Fit Pullover Hoodie MN‑POH‑WS25‑003" data-price="4543" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Rod-Viscose-Shirt-Printed-Trouser-Gulahmed-WNST-52006-Front-1.jpg?v=1761216594">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -196,7 +400,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Bemisaal Pulse Unstitched Fabric Blended‑LF</h6>
                     <p class="card-text mb-2">Rs. 4,028</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-12">Qty:</label>
+                            <select id="quantity-12">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="12" data-name="Bemisaal Pulse Unstitched Fabric Blended‑LF" data-price="4028" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Linen-Shirt-Gulahmed-SV-52002-Front.jpg?v=1761214818">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -207,7 +423,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Vision Taurus Unstitched Fabric Blended</h6>
                     <p class="card-text mb-2">Rs. 5,317</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-13">Qty:</label>
+                            <select id="quantity-13">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="13" data-name="Vision Taurus Unstitched Fabric Blended" data-price="5317" data-image="https://www.gulahmedshop.com/cdn/shop/files/Burnout-Velvet-Dupatta-Embroidered-Printed-Khaddar-Shirt-Dyed-Trouser-Gulahmed-BVL-52001-Front-White.jpg?v=1759130908">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -218,7 +446,19 @@
                 <div class="card-body d-flex flex-column">
                    <h6 class="card-title">Adore Unstitched Fabric Blended</h6>
                    <p class="card-text mb-2">Rs. 2,796</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                   <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-14">Qty:</label>
+                            <select id="quantity-14">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="14" data-name="Adore Unstitched Fabric Blended" data-price="2796" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Linen-Shirt-Gulahmed-SV-52005-Front.jpg?v=1761214805">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -229,7 +469,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Gul 900 Kraft Unstitched Fabric Blended‑LF</h6>
                     <p class="card-text mb-2">Rs. 4,872</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-15">Qty:</label>
+                            <select id="quantity-15">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="15" data-name="Gul 900 Kraft Unstitched Fabric Blended‑LF" data-price="4872" data-image="https://www.gulahmedshop.com/cdn/shop/files/Jacquard-Dupatta-Jacqaurd-Shirt-Dyed-Trouser-Gulahmed-MJ-52065-Front.jpg?v=1761215175">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -240,7 +492,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Sentinel Unstitched Fabric Cotton</h6>
                     <p class="card-text mb-2">Rs. 4,220</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-16">Qty:</label>
+                            <select id="quantity-16">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="16" data-name="Sentinel Unstitched Fabric Cotton" data-price="4220" data-image="https://www.gulahmedshop.com/cdn/shop/files/Printed-Khaddar-Dupatta-Printed-Khaddar-Shirt-Dyed-Trouser-Gulahmed-WNS-52058-Front-White.jpg?v=1761215704">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -251,7 +515,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Vision Taurus Unstitched Fabric Blended</h6>
                     <p class="card-text mb-2">Rs. 5,317</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-17">Qty:</label>
+                            <select id="quantity-17">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="17" data-name="Vision Taurus Unstitched Fabric Blended" data-price="5317" data-image="https://www.gulahmedshop.com/cdn/shop/files/printed-lawn-dupatta-printed-lawn-shirt-dyed-trouser-gulahmed-full-cl-42301b.jpg?v=1760789714">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -262,7 +538,19 @@
                 <div class="card-body d-flex flex-column">
                    <h6 class="card-title">Adore Unstitched Fabric Blended</h6>
                    <p class="card-text mb-2">Rs. 2,796</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                   <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-18">Qty:</label>
+                            <select id="quantity-18">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="18" data-name="Adore Unstitched Fabric Blended" data-price="2796" data-image="https://www.gulahmedshop.com/cdn/shop/files/Jacquard-Dupatta-Jacquard-Shirt-Dyed-Trouser-Gulahmed-MJ-52043-Side.jpg?v=1759818742">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -273,7 +561,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Gul 900 Kraft Unstitched Fabric Blended‑LF</h6>
                     <p class="card-text mb-2">Rs. 4,872</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-19">Qty:</label>
+                            <select id="quantity-19">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="19" data-name="Gul 900 Kraft Unstitched Fabric Blended‑LF" data-price="4872" data-image="https://www.gulahmedshop.com/cdn/shop/files/xcdfrty678uhgfcxdfrtyu7_1.jpg?v=1760789668">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -284,7 +584,19 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Sentinel Unstitched Fabric Cotton</h6>
                     <p class="card-text mb-2">Rs. 4,220</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
+                    <div class="product-quantity">
+                        <div class="quantity-selector">
+                            <label for="quantity-20">Qty:</label>
+                            <select id="quantity-20">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="20" data-name="Sentinel Unstitched Fabric Cotton" data-price="4220" data-image="https://www.gulahmedshop.com/cdn/shop/files/Yarn-Dyed-Jacquard-Dupatta-Yarn-Dyed-Jacquard-Shirt-Yarn-Dyed-Trouser-Gulahmed-MJ-52051-Front.jpg?v=1759818531">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -371,6 +683,13 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/js files for retail/js for women.js"></script>
