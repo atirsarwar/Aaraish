@@ -1,4 +1,40 @@
-// Shopping Cart System
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Create particle background
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 20 + 5;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const opacity = Math.random() * 0.1 + 0.05;
+                const animationDuration = Math.random() * 20 + 10;
+                const animationDelay = Math.random() * 5;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.opacity = opacity;
+                particle.style.animationDuration = `${animationDuration}s`;
+                particle.style.animationDelay = `${animationDelay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Shopping Cart System
         class ShoppingCart {
             constructor() {
                 this.cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
@@ -206,7 +242,7 @@
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    background: #6E1E28;
+                    background: var(--dark-maroon);
                     color: white;
                     padding: 1rem 2rem;
                     border-radius: 8px;
@@ -216,23 +252,10 @@
                     animation: fadeInOut 2s ease-in-out;
                 `;
                 
-                // Add animation keyframes
-                const style = document.createElement('style');
-                style.textContent = `
-                    @keyframes fadeInOut {
-                        0% { opacity: 0; transform: translate(-50%, -40%); }
-                        20% { opacity: 1; transform: translate(-50%, -50%); }
-                        80% { opacity: 1; transform: translate(-50%, -50%); }
-                        100% { opacity: 0; transform: translate(-50%, -60%); }
-                    }
-                `;
-                document.head.appendChild(style);
-                
                 document.body.appendChild(animation);
                 
                 setTimeout(() => {
                     document.body.removeChild(animation);
-                    document.head.removeChild(style);
                 }, 2000);
             }
         }
@@ -242,18 +265,20 @@
 
         // Preloader functionality
         window.addEventListener("load", () => {
-          const preloader = document.getElementById("preloader");
-          if (!preloader) return; // Safety check
+            createParticles();
+            
+            const preloader = document.getElementById("preloader");
+            if (!preloader) return; // Safety check
 
-          // Keep preloader visible for 3 seconds
-          setTimeout(() => {
-            preloader.classList.add("fade-out");
-
-            // Hide it completely after fade animation
+            // Keep preloader visible for 3 seconds
             setTimeout(() => {
-              preloader.style.display = "none";
-            }, 800);
-          }, 3000);
+                preloader.classList.add("fade-out");
+
+                // Hide it completely after fade animation
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                }, 800);
+            }, 3000);
         });
 
         // 3D tilt effect for product cards
@@ -302,6 +327,27 @@
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+
+        // Scroll animations for product cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe product cards for fade-in effect
+        document.querySelectorAll('.product-card').forEach((card, index) => {
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.transitionDelay = `${index * 0.1}s`;
+            observer.observe(card);
         });
 
         function submitNewsletter() {

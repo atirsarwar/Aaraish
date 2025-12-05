@@ -1,625 +1,629 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Men</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/retail pages styles/men styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Collection - Araish Ideas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/retail pages styles/men styles.css">
 </head>
 <body>
-   <!-- Preloader -->
-<div id="preloader">
-  <div class="preloader-content">
-    <img src="../images/logo.png" alt="Loading Logo" class="loader-logo" />
-    <div class="loading-text mt-3">Loading...</div>
-  </div>
-</div>
-
-<!-- Sticky Navigation -->
-<nav class="navbar navbar-expand-lg bg-white py-3 sticky-nav" id="stickyNav">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="ideasNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
-          <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
-          <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
-          <li class="nav-item"><a class="nav-link active" href="men .html">MEN</a></li>
-          <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
-          <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
-          <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
-          <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
-        </ul>
-        <div class="d-flex align-items-center gap-3 ideas-icons">
-          <!-- Search Icon -->
-          <a href="#" class="text-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </a>
-          <!-- User Icon -->
-          <a href="#" class="text-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="12" cy="8" r="4"></circle>
-              <path d="M21 20c0-4.418-3.582-8-8-8s-8 3.582-8 8"></path>
-            </svg>
-          </a>
-          <!-- Cart Icon -->
-          <a href="#" class="position-relative text-dark" id="cartIcon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="cart-count">
-              0
-            </span>
-          </a>
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content text-center">
+            <img src="https://via.placeholder.com/120x60/6E1E28/FFFFFF?text=ARAISH" alt="Logo" class="loader-logo" />
+            <div class="loading-text mt-3">Loading...</div>
         </div>
-      </div>
-  </div>
-</nav>
-
-<!-- Original Navigation -->
-<nav class="navbar navbar-expand-lg bg-white py-3">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="ideasNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
-          <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
-          <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
-          <li class="nav-item"><a class="nav-link active" href="men .html">MEN</a></li>
-          <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
-          <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
-          <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
-          <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
-        </ul>
-        <div class="d-flex align-items-center gap-3 ideas-icons">
-          <!-- Search Icon -->
-          <a href="#" class="text-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </a>
-          <!-- User Icon -->
-          <a href="#" class="text-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="12" cy="8" r="4"></circle>
-              <path d="M21 20c0-4.418-3.582-8-8-8s-8 3.582-8 8"></path>
-            </svg>
-          </a>
-          <!-- Cart Icon -->
-          <a href="#" class="position-relative text-dark" id="cartIconMain">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="cart-count-main">
-              0
-            </span>
-          </a>
-        </div>
-      </div>
-  </div>
-</nav>
-
-<!-- Cart Modal -->
-<div class="cart-overlay" id="cartOverlay"></div>
-<div class="cart-modal" id="cartModal">
-  <div class="cart-header">
-    <h3 class="cart-title">Your Shopping Cart</h3>
-    <button class="close-cart" id="closeCart">&times;</button>
-  </div>
-  <div class="cart-body" id="cartBody">
-    <!-- Cart items will be dynamically inserted here -->
-  </div>
-  <div class="cart-footer">
-    <div class="cart-total">
-      <span>Total:</span>
-      <span id="cartTotal">Rs. 0</span>
     </div>
-    <div class="cart-actions">
-      <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
-      <button class="btn-continue" id="continueShopping">Continue Shopping</button>
-    </div>
-  </div>
-</div>
 
-<section class="container">
-    <div class="row gy-4 py-5">
-        <!-- Product Cards -->
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Grey-100_-Cotton-Regular-Fit-SK-BSC25-051-Half-Front.jpg?v=1762329656" class="card-img-top" alt="Product 1">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Regular Fit Basic Suits SK‑BSC25‑049</h6>
-                    <p class="card-text mb-2">Rs. 6,993</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-1">Qty:</label>
-                            <select id="quantity-1">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="1" data-name="Regular Fit Basic Suits SK‑BSC25‑049" data-price="6993" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Grey-100_-Cotton-Regular-Fit-SK-BSC25-051-Half-Front.jpg?v=1762329656">Add To Cart</button>
+    <!-- Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white py-3 sticky-nav" id="stickyNav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/150x50/6E1E28/FFFFFF?text=ARAISH" alt="Ideas" height="32" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ideasNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
+                    <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="men .html">MEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 ideas-icons">
+                    <!-- Search Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <!-- User Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <!-- Cart Icon -->
+                    <a href="#" class="position-relative text-dark" id="cartIcon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark cart-badge" id="cart-count">
+                            0
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Blue-100_-Cotton-Regular-Fit-SK-BSC25-050-Half-Front.jpg?v=1762329643" class="card-img-top" alt="Product 2">
-                <div class="card-body d-flex flex-column">
-                  <h6 class="card-title">Regular Fit Basic Suits SK‑BSC25‑050</h6>
-                  <p class="card-text mb-2">Rs. 9,990</p>
-                  <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-2">Qty:</label>
-                            <select id="quantity-2">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="2" data-name="Regular Fit Basic Suits SK‑BSC25‑050" data-price="9990" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Blue-100_-Cotton-Regular-Fit-SK-BSC25-050-Half-Front.jpg?v=1762329643">Add To Cart</button>
+    </nav>
+
+    <!-- Original Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/150x50/6E1E28/FFFFFF?text=ARAISH" alt="Ideas" height="32" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ideasNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
+                    <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="men .html">MEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 ideas-icons">
+                    <!-- Search Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <!-- User Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <!-- Cart Icon -->
+                    <a href="#" class="position-relative text-dark" id="cartIconMain">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark cart-badge" id="cart-count-main">
+                            0
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Grey-100_-Cotton-Regular-Fit-SK-BSC25-049-Half-Front.jpg?v=1762329619" class="card-img-top" alt="Product 3">
-                <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Regular Fit Styling Suits SK‑BSC25‑056</h6>
-                     <p class="card-text mb-2">Rs. 7,990</p>
-                     <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-3">Qty:</label>
-                            <select id="quantity-3">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="3" data-name="Regular Fit Styling Suits SK‑BSC25‑056" data-price="7990" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Grey-100_-Cotton-Regular-Fit-SK-BSC25-049-Half-Front.jpg?v=1762329619">Add To Cart</button>
-                </div>
-            </div>
+    </nav>
+
+    <!-- Cart Modal -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Shopping Cart</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
         </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/olympia-latha-unstitched-fabric-cotton-cream-fullshot-front.jpg?v=1760304874" class="card-img-top" alt="Product 4">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Regular Fit Styling Suits SK‑STY25‑051</h6>
-                    <p class="card-text mb-2">Rs. 9,490</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-4">Qty:</label>
-                            <select id="quantity-4">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="4" data-name="Regular Fit Styling Suits SK‑STY25‑051" data-price="9490" data-image="https://www.gulahmedshop.com/cdn/shop/files/olympia-latha-unstitched-fabric-cotton-cream-fullshot-front.jpg?v=1760304874">Add To Cart</button>
-                </div>
-            </div>
+        <div class="cart-body" id="cartBody">
+            <!-- Cart items will be dynamically inserted here -->
         </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/velorum-g-unstitched-fabric-washnwear-chocolate-brown-fullshot-front.jpg?v=1761561132" class="card-img-top" alt="Product 5">
-                <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Regular Fit Sweater MN‑SWT‑WS25‑011 B</h6>
-                     <p class="card-text mb-2">Rs. 6,293</p>
-                     <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-5">Qty:</label>
-                            <select id="quantity-5">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="5" data-name="Regular Fit Sweater MN‑SWT‑WS25‑011 B" data-price="6293" data-image="https://www.gulahmedshop.com/cdn/shop/files/velorum-g-unstitched-fabric-washnwear-chocolate-brown-fullshot-front.jpg?v=1761561132">Add To Cart</button>
-                </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rs. 0</span>
             </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/sentinel-rb-unstitched-fabric-cotton-fawn-fullshot-front_c80f733e-8177-49e1-b412-382766bb5c88.jpg?v=1761560677" class="card-img-top" alt="Product 6">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Regular Fit Polo MN‑PSH‑SS25‑137</h6>
-                    <p class="card-text mb-2">Rs. 2,394</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-6">Qty:</label>
-                            <select id="quantity-6">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="6" data-name="Regular Fit Polo MN‑PSH‑SS25‑137" data-price="2394" data-image="https://www.gulahmedshop.com/cdn/shop/files/sentinel-rb-unstitched-fabric-cotton-fawn-fullshot-front_c80f733e-8177-49e1-b412-382766bb5c88.jpg?v=1761560677">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/opus-granite-rb-unstitched-fabric-washnwear-silver-grey-fullshot-front_12b2b2ae-b752-4991-b32a-f15a41f350a4.jpg?v=1761291464" class="card-img-top" alt="Product 7">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Regular Fit Basic Suits SK‑BSC25‑094</h6>
-                    <p class="card-text mb-2">Rs. 9,490</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-7">Qty:</label>
-                            <select id="quantity-7">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="7" data-name="Regular Fit Basic Suits SK‑BSC25‑094" data-price="9490" data-image="https://www.gulahmedshop.com/cdn/shop/files/opus-granite-rb-unstitched-fabric-washnwear-silver-grey-fullshot-front_12b2b2ae-b752-4991-b32a-f15a41f350a4.jpg?v=1761291464">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/kairos-g-unstitched-fabric-washnwear-off-white--fullshot-front.jpg?v=1761289188" class="card-img-top" alt="Product 8">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Regular Fit Basic Suits SK‑BSC25‑037</h6>
-                    <p class="card-text mb-2">Rs. 6,990</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-8">Qty:</label>
-                            <select id="quantity-8">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="8" data-name="Regular Fit Basic Suits SK‑BSC25‑037" data-price="6990" data-image="https://www.gulahmedshop.com/cdn/shop/files/kairos-g-unstitched-fabric-washnwear-off-white--fullshot-front.jpg?v=1761289188">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/gul-900-artisto-rb-unstitched-fabric-washnwear-light-brown-fullshot-front.jpg?v=1761288762" class="card-img-top" alt="Product 9">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Regular Fit Styling Suits SK‑STY25‑063</h6>
-                    <p class="card-text mb-2">Rs. 6,993</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-9">Qty:</label>
-                            <select id="quantity-9">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="9" data-name="Regular Fit Styling Suits SK‑STY25‑063" data-price="6993" data-image="https://www.gulahmedshop.com/cdn/shop/files/gul-900-artisto-rb-unstitched-fabric-washnwear-light-brown-fullshot-front.jpg?v=1761288762">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/bemisaal-pulse-vt-unstitched-fabric-washnwear-light-green-fullshot-front_5d6f5ece-1f87-4c97-a48a-041325b639f3.jpg?v=1761288217" class="card-img-top" alt="Product 10">
-                <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Regular Fit Sweater MN‑SWT‑WS25‑046 A</h6>
-                     <p class="card-text mb-2">Rs. 5,243</p>
-                     <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-10">Qty:</label>
-                            <select id="quantity-10">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="10" data-name="Regular Fit Sweater MN‑SWT‑WS25‑046 A" data-price="5243" data-image="https://www.gulahmedshop.com/cdn/shop/files/bemisaal-pulse-vt-unstitched-fabric-washnwear-light-green-fullshot-front_5d6f5ece-1f87-4c97-a48a-041325b639f3.jpg?v=1761288217">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/adore-kb-unstitched-fabric-washnwear-beige-fullshot-front_50d89cbe-03ef-4171-a0cd-27f6ed946aa9.jpg?v=1761033119" class="card-img-top" alt="Product 11">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Regular Fit Pullover Hoodie MN‑POH‑WS25‑003</h6>
-                    <p class="card-text mb-2">Rs. 4,543</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-11">Qty:</label>
-                            <select id="quantity-11">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="11" data-name="Regular Fit Pullover Hoodie MN‑POH‑WS25‑003" data-price="4543" data-image="https://www.gulahmedshop.com/cdn/shop/files/adore-kb-unstitched-fabric-washnwear-beige-fullshot-front_50d89cbe-03ef-4171-a0cd-27f6ed946aa9.jpg?v=1761033119">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/vision-taurus-co-unstitched-fabric-washnwear-cream-fullshot-front_e4754d74-0a58-406b-be22-4cd6c5e72920.jpg?v=1761030757" class="card-img-top" alt="Product 12">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Bemisaal Pulse Unstitched Fabric Blended‑LF</h6>
-                    <p class="card-text mb-2">Rs. 4,028</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-12">Qty:</label>
-                            <select id="quantity-12">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="12" data-name="Bemisaal Pulse Unstitched Fabric Blended‑LF" data-price="4028" data-image="https://www.gulahmedshop.com/cdn/shop/files/vision-taurus-co-unstitched-fabric-washnwear-cream-fullshot-front_e4754d74-0a58-406b-be22-4cd6c5e72920.jpg?v=1761030757">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/vision-ember-gk-unstitched-fabric-washnwear-off-white--fullshot-front_fed26397-19b7-49a8-b7af-0d04eba5cc9e.jpg?v=1761030255" class="card-img-top" alt="Product 13">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Vision Taurus Unstitched Fabric Blended</h6>
-                    <p class="card-text mb-2">Rs. 5,317</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-13">Qty:</label>
-                            <select id="quantity-13">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="13" data-name="Vision Taurus Unstitched Fabric Blended" data-price="5317" data-image="https://www.gulahmedshop.com/cdn/shop/files/vision-ember-gk-unstitched-fabric-washnwear-off-white--fullshot-front_fed26397-19b7-49a8-b7af-0d04eba5cc9e.jpg?v=1761030255">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/pearl-ps-unstitched-fabric-cotton-dark-teal-fullshot-front_219c03d7-1668-46b1-8d41-8c9cea0c3826.jpg?v=1761029625" class="card-img-top" alt="Product 14">
-                <div class="card-body d-flex flex-column">
-                   <h6 class="card-title">Adore Unstitched Fabric Blended</h6>
-                   <p class="card-text mb-2">Rs. 2,796</p>
-                   <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-14">Qty:</label>
-                            <select id="quantity-14">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="14" data-name="Adore Unstitched Fabric Blended" data-price="2796" data-image="https://www.gulahmedshop.com/cdn/shop/files/pearl-ps-unstitched-fabric-cotton-dark-teal-fullshot-front_219c03d7-1668-46b1-8d41-8c9cea0c3826.jpg?v=1761029625">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Kurta-Color-Mustard-100_-Cotton-Regular-Fit-KR-STY25-024-Half-Front.jpg?v=1760347778" class="card-img-top" alt="Product 15">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Gul 900 Kraft Unstitched Fabric Blended‑LF</h6>
-                    <p class="card-text mb-2">Rs. 4,872</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-15">Qty:</label>
-                            <select id="quantity-15">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="15" data-name="Gul 900 Kraft Unstitched Fabric Blended‑LF" data-price="4872" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Kurta-Color-Mustard-100_-Cotton-Regular-Fit-KR-STY25-024-Half-Front.jpg?v=1760347778">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/2iei23idjj23emd2mewlfk2ldkj2kjldjl2k_3.jpg?v=1758383787" class="card-img-top" alt="Product 16">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Sentinel Unstitched Fabric Cotton</h6>
-                    <p class="card-text mb-2">Rs. 4,220</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-16">Qty:</label>
-                            <select id="quantity-16">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="16" data-name="Sentinel Unstitched Fabric Cotton" data-price="4220" data-image="https://www.gulahmedshop.com/cdn/shop/files/2iei23idjj23emd2mewlfk2ldkj2kjldjl2k_3.jpg?v=1758383787">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Green-100_-Cotton-Regular-Fit-KP-STY25-013-Half-Front.jpg?v=1760702720" class="card-img-top" alt="Product 17">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Vision Taurus Unstitched Fabric Blended</h6>
-                    <p class="card-text mb-2">Rs. 5,317</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-17">Qty:</label>
-                            <select id="quantity-17">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="17" data-name="Vision Taurus Unstitched Fabric Blended" data-price="5317" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Green-100_-Cotton-Regular-Fit-KP-STY25-013-Half-Front.jpg?v=1760702720">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Sage-Blue-100_-Cotton-Slim-Fit-SK-BSCSL25-005-Half-Front.jpg?v=1759823263" class="card-img-top" alt="Product 18">
-                <div class="card-body d-flex flex-column">
-                   <h6 class="card-title">Adore Unstitched Fabric Blended</h6>
-                   <p class="card-text mb-2">Rs. 2,796</p>
-                   <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-18">Qty:</label>
-                            <select id="quantity-18">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="18" data-name="Adore Unstitched Fabric Blended" data-price="2796" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Sage-Blue-100_-Cotton-Slim-Fit-SK-BSCSL25-005-Half-Front.jpg?v=1759823263">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/httpscdn.shopify.comsfiles109007318products1_8c171ed8-0b89-41d7-a53a-19e6a1a3f931_3.jpg?v=1758383570" class="card-img-top" alt="Product 19">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Gul 900 Kraft Unstitched Fabric Blended‑LF</h6>
-                    <p class="card-text mb-2">Rs. 4,872</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-19">Qty:</label>
-                            <select id="quantity-19">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="19" data-name="Gul 900 Kraft Unstitched Fabric Blended‑LF" data-price="4872" data-image="https://www.gulahmedshop.com/cdn/shop/files/httpscdn.shopify.comsfiles109007318products1_8c171ed8-0b89-41d7-a53a-19e6a1a3f931_3.jpg?v=1758383570">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/m2a3508_2_2_1.jpg?v=1758383728" class="card-img-top" alt="Product 20">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Sentinel Unstitched Fabric Cotton</h6>
-                    <p class="card-text mb-2">Rs. 4,220</p>
-                    <div class="product-quantity">
-                        <div class="quantity-selector">
-                            <label for="quantity-20">Qty:</label>
-                            <select id="quantity-20">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="20" data-name="Sentinel Unstitched Fabric Cotton" data-price="4220" data-image="https://www.gulahmedshop.com/cdn/shop/files/m2a3508_2_2_1.jpg?v=1758383728">Add To Cart</button>
-                </div>
+            <div class="cart-actions">
+                <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+                <button class="btn-continue" id="continueShopping">Continue Shopping</button>
             </div>
         </div>
     </div>
-</section>
 
+    <section class="container">
+        <div class="row gy-4 py-5">
+            <!-- Product Cards - All 20 products with staggered animations -->
+            <!-- Product 1 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Grey-100_-Cotton-Regular-Fit-SK-BSC25-051-Half-Front.jpg?v=1762329656" class="card-img-top" alt="Product 1">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Regular Fit Basic Suits SK‑BSC25‑049</h6>
+                        <p class="card-text mb-2">Rs. 6,993</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-1">Qty:</label>
+                                <select id="quantity-1">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="1" data-name="Regular Fit Basic Suits SK‑BSC25‑049" data-price="6993" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Grey-100_-Cotton-Regular-Fit-SK-BSC25-051-Half-Front.jpg?v=1762329656">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Blue-100_-Cotton-Regular-Fit-SK-BSC25-050-Half-Front.jpg?v=1762329643" class="card-img-top" alt="Product 2">
+                    <div class="card-body d-flex flex-column">
+                      <h6 class="card-title">Regular Fit Basic Suits SK‑BSC25‑050</h6>
+                      <p class="card-text mb-2">Rs. 9,990</p>
+                      <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-2">Qty:</label>
+                                <select id="quantity-2">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="2" data-name="Regular Fit Basic Suits SK‑BSC25‑050" data-price="9990" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Blue-100_-Cotton-Regular-Fit-SK-BSC25-050-Half-Front.jpg?v=1762329643">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Grey-100_-Cotton-Regular-Fit-SK-BSC25-049-Half-Front.jpg?v=1762329619" class="card-img-top" alt="Product 3">
+                    <div class="card-body d-flex flex-column">
+                         <h6 class="card-title">Regular Fit Styling Suits SK‑BSC25‑056</h6>
+                         <p class="card-text mb-2">Rs. 7,990</p>
+                         <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-3">Qty:</label>
+                                <select id="quantity-3">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="3" data-name="Regular Fit Styling Suits SK‑BSC25‑056" data-price="7990" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Grey-100_-Cotton-Regular-Fit-SK-BSC25-049-Half-Front.jpg?v=1762329619">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/olympia-latha-unstitched-fabric-cotton-cream-fullshot-front.jpg?v=1760304874" class="card-img-top" alt="Product 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Regular Fit Styling Suits SK‑STY25‑051</h6>
+                        <p class="card-text mb-2">Rs. 9,490</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-4">Qty:</label>
+                                <select id="quantity-4">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="4" data-name="Regular Fit Styling Suits SK‑STY25‑051" data-price="9490" data-image="https://www.gulahmedshop.com/cdn/shop/files/olympia-latha-unstitched-fabric-cotton-cream-fullshot-front.jpg?v=1760304874">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/velorum-g-unstitched-fabric-washnwear-chocolate-brown-fullshot-front.jpg?v=1761561132" class="card-img-top" alt="Product 5">
+                    <div class="card-body d-flex flex-column">
+                         <h6 class="card-title">Regular Fit Sweater MN‑SWT‑WS25‑011 B</h6>
+                         <p class="card-text mb-2">Rs. 6,293</p>
+                         <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-5">Qty:</label>
+                                <select id="quantity-5">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="5" data-name="Regular Fit Sweater MN‑SWT‑WS25‑011 B" data-price="6293" data-image="https://www.gulahmedshop.com/cdn/shop/files/velorum-g-unstitched-fabric-washnwear-chocolate-brown-fullshot-front.jpg?v=1761561132">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="350">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/sentinel-rb-unstitched-fabric-cotton-fawn-fullshot-front_c80f733e-8177-49e1-b412-382766bb5c88.jpg?v=1761560677" class="card-img-top" alt="Product 6">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Regular Fit Polo MN‑PSH‑SS25‑137</h6>
+                        <p class="card-text mb-2">Rs. 2,394</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-6">Qty:</label>
+                                <select id="quantity-6">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="6" data-name="Regular Fit Polo MN‑PSH‑SS25‑137" data-price="2394" data-image="https://www.gulahmedshop.com/cdn/shop/files/sentinel-rb-unstitched-fabric-cotton-fawn-fullshot-front_c80f733e-8177-49e1-b412-382766bb5c88.jpg?v=1761560677">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 7 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/opus-granite-rb-unstitched-fabric-washnwear-silver-grey-fullshot-front_12b2b2ae-b752-4991-b32a-f15a41f350a4.jpg?v=1761291464" class="card-img-top" alt="Product 7">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Regular Fit Basic Suits SK‑BSC25‑094</h6>
+                        <p class="card-text mb-2">Rs. 9,490</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-7">Qty:</label>
+                                <select id="quantity-7">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="7" data-name="Regular Fit Basic Suits SK‑BSC25‑094" data-price="9490" data-image="https://www.gulahmedshop.com/cdn/shop/files/opus-granite-rb-unstitched-fabric-washnwear-silver-grey-fullshot-front_12b2b2ae-b752-4991-b32a-f15a41f350a4.jpg?v=1761291464">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/kairos-g-unstitched-fabric-washnwear-off-white--fullshot-front.jpg?v=1761289188" class="card-img-top" alt="Product 8">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Regular Fit Basic Suits SK‑BSC25‑037</h6>
+                        <p class="card-text mb-2">Rs. 6,990</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-8">Qty:</label>
+                                <select id="quantity-8">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="8" data-name="Regular Fit Basic Suits SK‑BSC25‑037" data-price="6990" data-image="https://www.gulahmedshop.com/cdn/shop/files/kairos-g-unstitched-fabric-washnwear-off-white--fullshot-front.jpg?v=1761289188">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 9 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/gul-900-artisto-rb-unstitched-fabric-washnwear-light-brown-fullshot-front.jpg?v=1761288762" class="card-img-top" alt="Product 9">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Regular Fit Styling Suits SK‑STY25‑063</h6>
+                        <p class="card-text mb-2">Rs. 6,993</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-9">Qty:</label>
+                                <select id="quantity-9">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="9" data-name="Regular Fit Styling Suits SK‑STY25‑063" data-price="6993" data-image="https://www.gulahmedshop.com/cdn/shop/files/gul-900-artisto-rb-unstitched-fabric-washnwear-light-brown-fullshot-front.jpg?v=1761288762">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 10 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="550">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/bemisaal-pulse-vt-unstitched-fabric-washnwear-light-green-fullshot-front_5d6f5ece-1f87-4c97-a48a-041325b639f3.jpg?v=1761288217" class="card-img-top" alt="Product 10">
+                    <div class="card-body d-flex flex-column">
+                         <h6 class="card-title">Regular Fit Sweater MN‑SWT‑WS25‑046 A</h6>
+                         <p class="card-text mb-2">Rs. 5,243</p>
+                         <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-10">Qty:</label>
+                                <select id="quantity-10">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="10" data-name="Regular Fit Sweater MN‑SWT‑WS25‑046 A" data-price="5243" data-image="https://www.gulahmedshop.com/cdn/shop/files/bemisaal-pulse-vt-unstitched-fabric-washnwear-light-green-fullshot-front_5d6f5ece-1f87-4c97-a48a-041325b639f3.jpg?v=1761288217">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 11 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/adore-kb-unstitched-fabric-washnwear-beige-fullshot-front_50d89cbe-03ef-4171-a0cd-27f6ed946aa9.jpg?v=1761033119" class="card-img-top" alt="Product 11">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Regular Fit Pullover Hoodie MN‑POH‑WS25‑003</h6>
+                        <p class="card-text mb-2">Rs. 4,543</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-11">Qty:</label>
+                                <select id="quantity-11">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="11" data-name="Regular Fit Pullover Hoodie MN‑POH‑WS25‑003" data-price="4543" data-image="https://www.gulahmedshop.com/cdn/shop/files/adore-kb-unstitched-fabric-washnwear-beige-fullshot-front_50d89cbe-03ef-4171-a0cd-27f6ed946aa9.jpg?v=1761033119">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 12 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="650">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/vision-taurus-co-unstitched-fabric-washnwear-cream-fullshot-front_e4754d74-0a58-406b-be22-4cd6c5e72920.jpg?v=1761030757" class="card-img-top" alt="Product 12">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Bemisaal Pulse Unstitched Fabric Blended‑LF</h6>
+                        <p class="card-text mb-2">Rs. 4,028</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-12">Qty:</label>
+                                <select id="quantity-12">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="12" data-name="Bemisaal Pulse Unstitched Fabric Blended‑LF" data-price="4028" data-image="https://www.gulahmedshop.com/cdn/shop/files/vision-taurus-co-unstitched-fabric-washnwear-cream-fullshot-front_e4754d74-0a58-406b-be22-4cd6c5e72920.jpg?v=1761030757">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 13 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="700">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/vision-ember-gk-unstitched-fabric-washnwear-off-white--fullshot-front_fed26397-19b7-49a8-b7af-0d04eba5cc9e.jpg?v=1761030255" class="card-img-top" alt="Product 13">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Vision Taurus Unstitched Fabric Blended</h6>
+                        <p class="card-text mb-2">Rs. 5,317</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-13">Qty:</label>
+                                <select id="quantity-13">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="13" data-name="Vision Taurus Unstitched Fabric Blended" data-price="5317" data-image="https://www.gulahmedshop.com/cdn/shop/files/vision-ember-gk-unstitched-fabric-washnwear-off-white--fullshot-front_fed26397-19b7-49a8-b7af-0d04eba5cc9e.jpg?v=1761030255">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 14 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="750">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/pearl-ps-unstitched-fabric-cotton-dark-teal-fullshot-front_219c03d7-1668-46b1-8d41-8c9cea0c3826.jpg?v=1761029625" class="card-img-top" alt="Product 14">
+                    <div class="card-body d-flex flex-column">
+                       <h6 class="card-title">Adore Unstitched Fabric Blended</h6>
+                       <p class="card-text mb-2">Rs. 2,796</p>
+                       <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-14">Qty:</label>
+                                <select id="quantity-14">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="14" data-name="Adore Unstitched Fabric Blended" data-price="2796" data-image="https://www.gulahmedshop.com/cdn/shop/files/pearl-ps-unstitched-fabric-cotton-dark-teal-fullshot-front_219c03d7-1668-46b1-8d41-8c9cea0c3826.jpg?v=1761029625">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 15 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="800">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Kurta-Color-Mustard-100_-Cotton-Regular-Fit-KR-STY25-024-Half-Front.jpg?v=1760347778" class="card-img-top" alt="Product 15">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Gul 900 Kraft Unstitched Fabric Blended‑LF</h6>
+                        <p class="card-text mb-2">Rs. 4,872</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-15">Qty:</label>
+                                <select id="quantity-15">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="15" data-name="Gul 900 Kraft Unstitched Fabric Blended‑LF" data-price="4872" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Kurta-Color-Mustard-100_-Cotton-Regular-Fit-KR-STY25-024-Half-Front.jpg?v=1760347778">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 16 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="850">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/2iei23idjj23emd2mewlfk2ldkj2kjldjl2k_3.jpg?v=1758383787" class="card-img-top" alt="Product 16">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Sentinel Unstitched Fabric Cotton</h6>
+                        <p class="card-text mb-2">Rs. 4,220</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-16">Qty:</label>
+                                <select id="quantity-16">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="16" data-name="Sentinel Unstitched Fabric Cotton" data-price="4220" data-image="https://www.gulahmedshop.com/cdn/shop/files/2iei23idjj23emd2mewlfk2ldkj2kjldjl2k_3.jpg?v=1758383787">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 17 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="900">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Green-100_-Cotton-Regular-Fit-KP-STY25-013-Half-Front.jpg?v=1760702720" class="card-img-top" alt="Product 17">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Vision Taurus Unstitched Fabric Blended</h6>
+                        <p class="card-text mb-2">Rs. 5,317</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-17">Qty:</label>
+                                <select id="quantity-17">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="17" data-name="Vision Taurus Unstitched Fabric Blended" data-price="5317" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Green-100_-Cotton-Regular-Fit-KP-STY25-013-Half-Front.jpg?v=1760702720">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 18 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="950">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Sage-Blue-100_-Cotton-Slim-Fit-SK-BSCSL25-005-Half-Front.jpg?v=1759823263" class="card-img-top" alt="Product 18">
+                    <div class="card-body d-flex flex-column">
+                       <h6 class="card-title">Adore Unstitched Fabric Blended</h6>
+                       <p class="card-text mb-2">Rs. 2,796</p>
+                       <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-18">Qty:</label>
+                                <select id="quantity-18">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="18" data-name="Adore Unstitched Fabric Blended" data-price="2796" data-image="https://www.gulahmedshop.com/cdn/shop/files/Men-Suits-Color-Sage-Blue-100_-Cotton-Slim-Fit-SK-BSCSL25-005-Half-Front.jpg?v=1759823263">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 19 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="1000">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/httpscdn.shopify.comsfiles109007318products1_8c171ed8-0b89-41d7-a53a-19e6a1a3f931_3.jpg?v=1758383570" class="card-img-top" alt="Product 19">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Gul 900 Kraft Unstitched Fabric Blended‑LF</h6>
+                        <p class="card-text mb-2">Rs. 4,872</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-19">Qty:</label>
+                                <select id="quantity-19">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="19" data-name="Gul 900 Kraft Unstitched Fabric Blended‑LF" data-price="4872" data-image="https://www.gulahmedshop.com/cdn/shop/files/httpscdn.shopify.comsfiles109007318products1_8c171ed8-0b89-41d7-a53a-19e6a1a3f931_3.jpg?v=1758383570">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 20 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="1050">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/m2a3508_2_2_1.jpg?v=1758383728" class="card-img-top" alt="Product 20">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Sentinel Unstitched Fabric Cotton</h6>
+                        <p class="card-text mb-2">Rs. 4,220</p>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <label for="quantity-20">Qty:</label>
+                                <select id="quantity-20">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="20" data-name="Sentinel Unstitched Fabric Cotton" data-price="4220" data-image="https://www.gulahmedshop.com/cdn/shop/files/m2a3508_2_2_1.jpg?v=1758383728">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- footer -->
-<section class="collection-intro py-5">
+    <!-- footer -->
+    <section class="collection-intro py-5" data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-10 mx-auto">
                     <h2 class="section-title mb-4">
-                        Unstitched Lawn 2025 Collection – Lawn Dresses Online from Araish Ideas
+                        Premium Men's Collection – Fashion for the Modern Gentleman
                     </h2>
                     <p class="section-desc">
-                        Shop unstitched fabric clothes for men at Araish, where tradition meets modern style. Our unstitched collection offers a variety of fabrics, prints, and embroideries, allowing you to create a men's suit that fits your personal style. Whether you prefer a casual everyday look or a more formal outfit, our unstitched fabric range ensures versatility and comfort.
+                        Shop premium men's clothing at Araish Ideas, where traditional craftsmanship meets contemporary style. Our men's collection offers a variety of fabrics, fits, and designs, allowing you to create a wardrobe that reflects your personal style. Whether you prefer a casual everyday look or sophisticated formal attire, our range ensures versatility and comfort.
                     </p>
                     <p class="section-desc">
-                        Get ready to embrace the season with Araish's Unstitched <strong>Lawn 2025</strong> Collection, featuring stunning designs for every men's style. From delicate embroideries to bold prints, each unstitched clothing collection for men brings something unique, ensuring you find the perfect outfit for every occasion.
+                        Get ready to elevate your style with Araish Ideas' <strong>Men's Collection 2025</strong>, featuring stunning designs for every modern gentleman. From classic suits to contemporary casual wear, each piece brings something unique, ensuring you find the perfect outfit for every occasion.
                     </p>
                     <p class="section-desc">
-                        Not only that, but Ideas' ready-to-wear collection for men offers stitched dresses and suits for those who want to avoid the hassle of visiting the tailor repeatedly.
+                        Not only that, but Araish Ideas' ready-to-wear collection for men offers perfectly tailored garments for those who want premium quality without the hassle of visiting the tailor repeatedly.
                     </p>
                     <a href="#" class="btn btn-success btn-lg custom-btn mt-3 px-5" id="readMoreBtn">Read More</a>
                 </div>
@@ -627,8 +631,7 @@
         </div>
     </section>
 
-
-     <footer class="bg-light py-5">
+    <footer class="bg-light py-5">
         <div class="container">
             <div class="row gy-4">
                 <div class="col-12 col-md-3">
@@ -661,6 +664,11 @@
                         <li><a href="#">INSTAGRAM</a></li>
                         <li><a href="#">WHATSAPP</a></li>
                     </ul>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="col-12 col-md-4">
                     <h6 class="fw-bold mb-3">SIGNUP FOR IDEAS NEWSLETTER</h6>
@@ -686,12 +694,11 @@
     
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 15l-6-6-6 6"/>
-        </svg>
+        <i class="fas fa-chevron-up"></i>
     </button>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/js files for retail/js for men.js"></script>
 </body>
 </html>

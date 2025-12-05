@@ -5,295 +5,453 @@
     <title>Bags</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/retail pages styles/styles for bags.css">
     <link rel="stylesheet" href="../css/retail pages styles/styles for bags.css">
 </head>
 <body>
-  <!-- PREMIUM PRELOADER -->
-  <div id="preloader">
-    <div class="preloader-content text-center">
-      <img src="../images/logo.png" alt="Logo" class="loader-logo" />
-      <div class="loading-text mt-3">Loading...</div>
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content text-center">
+            <img src="../images/logo.png" alt="Logo" class="loader-logo" />
+            <div class="loading-text mt-3">Loading...</div>
+        </div>
     </div>
-  </div>
 
-<nav class="navbar navbar-expand-lg bg-white py-3">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="ideasNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
-          <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
-          <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
-          <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
-          <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
-          <li class="nav-item"><a class="nav-link active" href="bags.html">BAGS</a></li>
-          <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
-          <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
-        </ul>
-        <div class="d-flex align-items-center gap-3 ideas-icons">
-          <!-- Search Icon -->
-          <a href="#" class="text-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </a>
-          <!-- User Icon -->
-          <a href="#" class="text-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="12" cy="8" r="4"></circle>
-              <path d="M21 20c0-4.418-3.582-8-8-8s-8 3.582-8 8"></path>
-            </svg>
-          </a>
-          <!-- Cart Icon -->
-          <a href="#" class="position-relative text-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="cart-count">
-              0
-            </span>
-          </a>
+    <!-- Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white py-3 sticky-nav" id="stickyNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ideasNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
+                    <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="bags.html">BAGS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 ideas-icons">
+                    <!-- Search Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <!-- User Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <!-- Cart Icon -->
+                    <a href="#" class="position-relative text-dark" id="cartIcon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark cart-badge" id="cart-count">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-  </div>
-</nav>
+    </nav>
 
+    <!-- Original Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ideasNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
+                    <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="bags.html">BAGS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 ideas-icons">
+                    <!-- Search Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <!-- User Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <!-- Cart Icon -->
+                    <a href="#" class="position-relative text-dark" id="cartIconMain">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark cart-badge" id="cart-count-main">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<section class="container">
-    <div class="row gy-4 py-5">
-        <!-- Product Cards -->
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/446783-navy-bucketbag-front-ideas.jpg?v=1761387000" class="card-img-top" alt="Luxury Leather Tote Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Luxury Leather Tote Bag WBG-81001</h6>
-                    <p class="card-text mb-2">Rs. 8,993</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
+    <!-- Cart Modal -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Shopping Cart</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
         </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/446782-maroon-bucketbag-front-ideas.jpg?v=1761386952" class="card-img-top" alt="Designer Crossbody Bag">
-                <div class="card-body d-flex flex-column">
-                  <h6 class="card-title">Designer Crossbody Bag WBG-81012</h6>
-                  <p class="card-text mb-2">Rs. 7,990</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
+        <div class="cart-body" id="cartBody">
+            <!-- Cart items will be dynamically inserted here -->
         </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/445136-black-handbag-front-ideas.jpg?v=1761376203" class="card-img-top" alt="Elegant Evening Clutch">
-                <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Elegant Evening Clutch WBG-81023</h6>
-                     <p class="card-text mb-2">Rs. 5,990</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rs. 0</span>
             </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/445097-tote-bag-beige-black-front-ideas.jpg?v=1760179968" class="card-img-top" alt="Vintage Shoulder Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Vintage Shoulder Bag WBG-81034</h6>
-                    <p class="card-text mb-2">Rs. 9,490</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/445096-tote-bag-tan-beige-front-ideas.jpg?v=1760179837" class="card-img-top" alt="Modern Backpack Purse">
-                <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Modern Backpack Purse WBG-81045</h6>
-                     <p class="card-text mb-2">Rs. 6,293</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/444748-tote-bag-beige-front-ideas.jpg?v=1760179744" class="card-img-top" alt="Quilted Chain Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Quilted Chain Bag WBG-81056</h6>
-                    <p class="card-text mb-2">Rs. 12,394</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/444747-tote-bag-olivegreen-front-ideas.jpg?v=1760179689" class="card-img-top" alt="Structured Satchel Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Structured Satchel Bag WBG-81067</h6>
-                    <p class="card-text mb-2">Rs. 10,490</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/444746-tote-bag-mint-beige-front-ideas.jpg?v=1761376455" class="card-img-top" alt="Boho Fringe Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Boho Fringe Bag WBG-81078</h6>
-                    <p class="card-text mb-2">Rs. 6,990</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/444745-tote-bag-tan-beige-front-ideas.jpg?v=1761376515" class="card-img-top" alt="Designer Hobo Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Designer Hobo Bag WBG-81089</h6>
-                    <p class="card-text mb-2">Rs. 8,993</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/444740-offwhite-tote-bag-front-ideas.jpg?v=1760179521" class="card-img-top" alt="Embroidered Tote Bag">
-                <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Embroidered Tote Bag WBG-81100</h6>
-                     <p class="card-text mb-2">Rs. 7,243</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/444739-darkbrown-tote-bag-front-ideas.jpg?v=1760179464" class="card-img-top" alt="Mini Top Handle Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Mini Top Handle Bag WBG-81111</h6>
-                    <p class="card-text mb-2">Rs. 5,543</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/416603_8.jpg?v=1760436364" class="card-img-top" alt="Woven Straw Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Woven Straw Bag WBG-81122</h6>
-                    <p class="card-text mb-2">Rs. 4,028</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/419775_5.jpg?v=1760436357" class="card-img-top" alt="Leather Messenger Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Leather Messenger Bag WBG-81133</h6>
-                    <p class="card-text mb-2">Rs. 9,317</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/444742-black-crossbody-bag-front-ideas.jpg?v=1759138459" class="card-img-top" alt="Beaded Evening Bag">
-                <div class="card-body d-flex flex-column">
-                   <h6 class="card-title">Beaded Evening Bag WBG-81144</h6>
-                   <p class="card-text mb-2">Rs. 8,796</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/444752-champaigne-beige-cardholder-back-ideas.jpg?v=1759139497" class="card-img-top" alt="Canvas Tote Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Canvas Tote Bag WBG-81155</h6>
-                    <p class="card-text mb-2">Rs. 3,872</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/416608_2.jpg?v=1760436354" class="card-img-top" alt="Designer Bucket Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Designer Bucket Bag WBG-81166</h6>
-                    <p class="card-text mb-2">Rs. 11,220</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/444738-olivegreen-tote-bag-front-ideas.jpg?v=1759138599" class="card-img-top" alt="Vintage Clutch Purse">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Vintage Clutch Purse WBG-81177</h6>
-                    <p class="card-text mb-2">Rs. 5,317</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/428969-yellow-crossbody-wallet-side-ideas.jpg?v=1758371208" class="card-img-top" alt="Designer Saddle Bag">
-                <div class="card-body d-flex flex-column">
-                   <h6 class="card-title">Designer Saddle Bag WBG-81188</h6>
-                   <p class="card-text mb-2">Rs. 9,796</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/424484-black-tote-bag-front-2-ideas.jpg?v=1758371191" class="card-img-top" alt="Embellished Shoulder Bag">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Embellished Shoulder Bag WBG-81199</h6>
-                    <p class="card-text mb-2">Rs. 7,872</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="https://www.gulahmedshop.com/cdn/shop/files/444758-red-cardholder-back-ideas.jpg?v=1759138808" class="card-img-top" alt="Leather Crossbody Purse">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Leather Crossbody Purse WBG-81210</h6>
-                    <p class="card-text mb-2">Rs. 6,220</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Add To Cart</button>
-                </div>
+            <div class="cart-actions">
+                <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+                <button class="btn-continue" id="continueShopping">Continue Shopping</button>
             </div>
         </div>
     </div>
-</section>
+
+    <section class="container">
+        <div class="row gy-4 py-5">
+            <!-- Product Cards with updated descriptions matching images -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/446783-navy-bucketbag-front-ideas.jpg?v=1761387000" class="card-img-top" alt="Navy Blue Bucket Bag">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Navy Blue Bucket Bag WBG-81001</h6>
+                        <p class="card-text mb-2">Rs. 8,993</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="1" data-name="Navy Blue Bucket Bag WBG-81001" data-price="8993" data-image="https://www.gulahmedshop.com/cdn/shop/files/446783-navy-bucketbag-front-ideas.jpg?v=1761387000">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/446782-maroon-bucketbag-front-ideas.jpg?v=1761386952" class="card-img-top" alt="Maroon Bucket Bag">
+                    <div class="card-body d-flex flex-column">
+                      <h6 class="card-title">Maroon Bucket Bag WBG-81012</h6>
+                      <p class="card-text mb-2">Rs. 7,990</p>
+                      <div class="quantity-selector">
+                          <button class="decrease-btn">-</button>
+                          <input type="number" class="quantity-input" value="1" min="1">
+                          <button class="increase-btn">+</button>
+                      </div>
+                      <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="2" data-name="Maroon Bucket Bag WBG-81012" data-price="7990" data-image="https://www.gulahmedshop.com/cdn/shop/files/446782-maroon-bucketbag-front-ideas.jpg?v=1761386952">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/445136-black-handbag-front-ideas.jpg?v=1761376203" class="card-img-top" alt="Black Elegant Handbag">
+                    <div class="card-body d-flex flex-column">
+                         <h6 class="card-title">Black Elegant Handbag WBG-81023</h6>
+                         <p class="card-text mb-2">Rs. 5,990</p>
+                         <div class="quantity-selector">
+                             <button class="decrease-btn">-</button>
+                             <input type="number" class="quantity-input" value="1" min="1">
+                             <button class="increase-btn">+</button>
+                         </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="3" data-name="Black Elegant Handbag WBG-81023" data-price="5990" data-image="https://www.gulahmedshop.com/cdn/shop/files/445136-black-handbag-front-ideas.jpg?v=1761376203">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/445097-tote-bag-beige-black-front-ideas.jpg?v=1760179968" class="card-img-top" alt="Beige & Black Tote Bag">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Beige & Black Tote Bag WBG-81034</h6>
+                        <p class="card-text mb-2">Rs. 9,490</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="4" data-name="Beige & Black Tote Bag WBG-81034" data-price="9490" data-image="https://www.gulahmedshop.com/cdn/shop/files/445097-tote-bag-beige-black-front-ideas.jpg?v=1760179968">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/445096-tote-bag-tan-beige-front-ideas.jpg?v=1760179837" class="card-img-top" alt="Tan & Beige Tote Bag">
+                    <div class="card-body d-flex flex-column">
+                         <h6 class="card-title">Tan & Beige Tote Bag WBG-81045</h6>
+                         <p class="card-text mb-2">Rs. 6,293</p>
+                         <div class="quantity-selector">
+                             <button class="decrease-btn">-</button>
+                             <input type="number" class="quantity-input" value="1" min="1">
+                             <button class="increase-btn">+</button>
+                         </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="5" data-name="Tan & Beige Tote Bag WBG-81045" data-price="6293" data-image="https://www.gulahmedshop.com/cdn/shop/files/445096-tote-bag-tan-beige-front-ideas.jpg?v=1760179837">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="350">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/444748-tote-bag-beige-front-ideas.jpg?v=1760179744" class="card-img-top" alt="Classic Beige Tote Bag">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Classic Beige Tote Bag WBG-81056</h6>
+                        <p class="card-text mb-2">Rs. 12,394</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="6" data-name="Classic Beige Tote Bag WBG-81056" data-price="12394" data-image="https://www.gulahmedshop.com/cdn/shop/files/444748-tote-bag-beige-front-ideas.jpg?v=1760179744">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/444747-tote-bag-olivegreen-front-ideas.jpg?v=1760179689" class="card-img-top" alt="Olive Green Tote Bag">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Olive Green Tote Bag WBG-81067</h6>
+                        <p class="card-text mb-2">Rs. 10,490</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="7" data-name="Olive Green Tote Bag WBG-81067" data-price="10490" data-image="https://www.gulahmedshop.com/cdn/shop/files/444747-tote-bag-olivegreen-front-ideas.jpg?v=1760179689">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/444746-tote-bag-mint-beige-front-ideas.jpg?v=1761376455" class="card-img-top" alt="Mint & Beige Tote Bag">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Mint & Beige Tote Bag WBG-81078</h6>
+                        <p class="card-text mb-2">Rs. 6,990</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="8" data-name="Mint & Beige Tote Bag WBG-81078" data-price="6990" data-image="https://www.gulahmedshop.com/cdn/shop/files/444746-tote-bag-mint-beige-front-ideas.jpg?v=1761376455">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/444745-tote-bag-tan-beige-front-ideas.jpg?v=1761376515" class="card-img-top" alt="Tan Beige Pattern Tote">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Tan Beige Pattern Tote Bag WBG-81089</h6>
+                        <p class="card-text mb-2">Rs. 8,993</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="9" data-name="Tan Beige Pattern Tote Bag WBG-81089" data-price="8993" data-image="https://www.gulahmedshop.com/cdn/shop/files/444745-tote-bag-tan-beige-front-ideas.jpg?v=1761376515">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="550">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/444740-offwhite-tote-bag-front-ideas.jpg?v=1760179521" class="card-img-top" alt="Off White Tote Bag">
+                    <div class="card-body d-flex flex-column">
+                         <h6 class="card-title">Off White Tote Bag WBG-81100</h6>
+                         <p class="card-text mb-2">Rs. 7,243</p>
+                         <div class="quantity-selector">
+                             <button class="decrease-btn">-</button>
+                             <input type="number" class="quantity-input" value="1" min="1">
+                             <button class="increase-btn">+</button>
+                         </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="10" data-name="Off White Tote Bag WBG-81100" data-price="7243" data-image="https://www.gulahmedshop.com/cdn/shop/files/444740-offwhite-tote-bag-front-ideas.jpg?v=1760179521">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/444739-darkbrown-tote-bag-front-ideas.jpg?v=1760179464" class="card-img-top" alt="Dark Brown Tote Bag">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Dark Brown Tote Bag WBG-81111</h6>
+                        <p class="card-text mb-2">Rs. 5,543</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="11" data-name="Dark Brown Tote Bag WBG-81111" data-price="5543" data-image="https://www.gulahmedshop.com/cdn/shop/files/444739-darkbrown-tote-bag-front-ideas.jpg?v=1760179464">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="650">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/416603_8.jpg?v=1760436364" class="card-img-top" alt="Patterned Shoulder Bag">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Patterned Shoulder Bag WBG-81122</h6>
+                        <p class="card-text mb-2">Rs. 4,028</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="12" data-name="Patterned Shoulder Bag WBG-81122" data-price="4028" data-image="https://www.gulahmedshop.com/cdn/shop/files/416603_8.jpg?v=1760436364">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="700">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/419775_5.jpg?v=1760436357" class="card-img-top" alt="Embroidered Handbag">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Embroidered Handbag WBG-81133</h6>
+                        <p class="card-text mb-2">Rs. 9,317</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="13" data-name="Embroidered Handbag WBG-81133" data-price="9317" data-image="https://www.gulahmedshop.com/cdn/shop/files/419775_5.jpg?v=1760436357">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="750">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/444742-black-crossbody-bag-front-ideas.jpg?v=1759138459" class="card-img-top" alt="Black Crossbody Bag">
+                    <div class="card-body d-flex flex-column">
+                       <h6 class="card-title">Black Crossbody Bag WBG-81144</h6>
+                       <p class="card-text mb-2">Rs. 8,796</p>
+                       <div class="quantity-selector">
+                           <button class="decrease-btn">-</button>
+                           <input type="number" class="quantity-input" value="1" min="1">
+                           <button class="increase-btn">+</button>
+                       </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="14" data-name="Black Crossbody Bag WBG-81144" data-price="8796" data-image="https://www.gulahmedshop.com/cdn/shop/files/444742-black-crossbody-bag-front-ideas.jpg?v=1759138459">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="800">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/444752-champaigne-beige-cardholder-back-ideas.jpg?v=1759139497" class="card-img-top" alt="Champagne Beige Cardholder">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Champagne Beige Cardholder WBG-81155</h6>
+                        <p class="card-text mb-2">Rs. 3,872</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="15" data-name="Champagne Beige Cardholder WBG-81155" data-price="3872" data-image="https://www.gulahmedshop.com/cdn/shop/files/444752-champaigne-beige-cardholder-back-ideas.jpg?v=1759139497">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="850">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/416608_2.jpg?v=1760436354" class="card-img-top" alt="Floral Pattern Handbag">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Floral Pattern Handbag WBG-81166</h6>
+                        <p class="card-text mb-2">Rs. 11,220</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="16" data-name="Floral Pattern Handbag WBG-81166" data-price="11220" data-image="https://www.gulahmedshop.com/cdn/shop/files/416608_2.jpg?v=1760436354">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="900">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/444738-olivegreen-tote-bag-front-ideas.jpg?v=1759138599" class="card-img-top" alt="Olive Green Leather Tote">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Olive Green Leather Tote WBG-81177</h6>
+                        <p class="card-text mb-2">Rs. 5,317</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="17" data-name="Olive Green Leather Tote WBG-81177" data-price="5317" data-image="https://www.gulahmedshop.com/cdn/shop/files/444738-olivegreen-tote-bag-front-ideas.jpg?v=1759138599">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="950">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/428969-yellow-crossbody-wallet-side-ideas.jpg?v=1758371208" class="card-img-top" alt="Yellow Crossbody Wallet">
+                    <div class="card-body d-flex flex-column">
+                       <h6 class="card-title">Yellow Crossbody Wallet WBG-81188</h6>
+                       <p class="card-text mb-2">Rs. 9,796</p>
+                       <div class="quantity-selector">
+                           <button class="decrease-btn">-</button>
+                           <input type="number" class="quantity-input" value="1" min="1">
+                           <button class="increase-btn">+</button>
+                       </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="18" data-name="Yellow Crossbody Wallet WBG-81188" data-price="9796" data-image="https://www.gulahmedshop.com/cdn/shop/files/428969-yellow-crossbody-wallet-side-ideas.jpg?v=1758371208">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="1000">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/424484-black-tote-bag-front-2-ideas.jpg?v=1758371191" class="card-img-top" alt="Black Leather Tote Bag">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Black Leather Tote Bag WBG-81199</h6>
+                        <p class="card-text mb-2">Rs. 7,872</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="19" data-name="Black Leather Tote Bag WBG-81199" data-price="7872" data-image="https://www.gulahmedshop.com/cdn/shop/files/424484-black-tote-bag-front-2-ideas.jpg?v=1758371191">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="1050">
+                <div class="card product-card h-100">
+                    <img src="https://www.gulahmedshop.com/cdn/shop/files/444758-red-cardholder-back-ideas.jpg?v=1759138808" class="card-img-top" alt="Red Cardholder">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Red Cardholder WBG-81210</h6>
+                        <p class="card-text mb-2">Rs. 6,220</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="20" data-name="Red Cardholder WBG-81210" data-price="6220" data-image="https://www.gulahmedshop.com/cdn/shop/files/444758-red-cardholder-back-ideas.jpg?v=1759138808">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-<!-- footer -->
-<section class="collection-intro py-5">
+    <!-- footer -->
+    <section class="collection-intro py-5" data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-10 mx-auto">
@@ -349,6 +507,11 @@
                         <li><a href="#">INSTAGRAM</a></li>
                         <li><a href="#">WHATSAPP</a></li>
                     </ul>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="col-12 col-md-4">
                     <h6 class="fw-bold mb-3">SIGNUP FOR IDEAS NEWSLETTER</h6>
@@ -372,7 +535,13 @@
         </div>
     </footer>
     
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/js files for retail/js for bags.js"></script>
 </body>
 </html>

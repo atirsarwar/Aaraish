@@ -2,148 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shoes</title>
+    <title>Shoes Collection - Araish Ideas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/retail pages styles/shoes styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="../css/retail pages styles/shoes styles.css">
 </head>
 <body>
-   <!-- Preloader -->
-<div id="preloader">
-  <div class="preloader-content">
-    <img src="../images/logo.png" alt="Loading Logo" class="loader-logo" />
-    <div class="loading-text mt-3">Loading...</div>
-  </div>
-</div>
-
-<!-- Sticky Navigation -->
-<nav class="navbar navbar-expand-lg bg-white py-3 sticky-nav" id="stickyNav">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="ideasNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
-          <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
-          <li class="nav-item"><a class="nav-link active" href="shoes.html">SHOES</a></li>
-          <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
-          <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
-          <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
-          <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
-          <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
-        </ul>
-        <div class="d-flex align-items-center gap-3 ideas-icons">
-          <!-- Search Icon -->
-          <a href="#" class="text-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </a>
-          <!-- User Icon -->
-          <a href="#" class="text-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="12" cy="8" r="4"></circle>
-              <path d="M21 20c0-4.418-3.582-8-8-8s-8 3.582-8 8"></path>
-            </svg>
-          </a>
-          <!-- Cart Icon -->
-          <a href="#" class="position-relative text-dark" id="cartIcon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="cart-count">
-              0
-            </span>
-          </a>
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content text-center">
+            <img src="https://via.placeholder.com/120x60/6E1E28/FFFFFF?text=ARAISH" alt="Logo" class="loader-logo" />
+            <div class="loading-text mt-3">Loading...</div>
         </div>
-      </div>
-  </div>
-</nav>
+    </div>
 
-<!-- Original Navigation -->
-<nav class="navbar navbar-expand-lg bg-white py-3">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="ideasNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
-          <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
-          <li class="nav-item"><a class="nav-link active" href="shoes.html">SHOES</a></li>
-          <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
-          <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
-          <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
-          <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
-          <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
-        </ul>
-        <div class="d-flex align-items-center gap-3 ideas-icons">
-          <!-- Search Icon -->
-          <a href="#" class="text-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </a>
-          <!-- User Icon -->
-          <a href="#" class="text-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="12" cy="8" r="4"></circle>
-              <path d="M21 20c0-4.418-3.582-8-8-8s-8 3.582-8 8"></path>
-            </svg>
-          </a>
-          <!-- Cart Icon -->
-          <a href="#" class="position-relative text-dark" id="cartIconMain">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="cart-count-main">
-              0
-            </span>
-          </a>
+    <!-- Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white py-3 sticky-nav" id="stickyNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/150x50/6E1E28/FFFFFF?text=ARAISH" alt="Ideas" height="32" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ideasNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
+                    <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="shoes.html">SHOES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 ideas-icons">
+                    <!-- Search Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <!-- User Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <!-- Cart Icon -->
+                    <a href="#" class="position-relative text-dark" id="cartIcon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark cart-badge" id="cart-count">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-  </div>
-</nav>
+    </nav>
 
-<!-- Cart Modal -->
-<div class="cart-overlay" id="cartOverlay"></div>
-<div class="cart-modal" id="cartModal">
-  <div class="cart-header">
-    <h3 class="cart-title">Your Shopping Cart</h3>
-    <button class="close-cart" id="closeCart">&times;</button>
-  </div>
-  <div class="cart-body" id="cartBody">
-    <!-- Cart items will be dynamically inserted here -->
-  </div>
-  <div class="cart-footer">
-    <div class="cart-total">
-      <span>Total:</span>
-      <span id="cartTotal">Rs. 0</span>
+    <!-- Original Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/150x50/6E1E28/FFFFFF?text=ARAISH" alt="Ideas" height="32" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ideasNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
+                    <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="shoes.html">SHOES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fragrance.html">FRAGRANCES</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 ideas-icons">
+                    <!-- Search Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <!-- User Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <!-- Cart Icon -->
+                    <a href="#" class="position-relative text-dark" id="cartIconMain">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark cart-badge" id="cart-count-main">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Modal -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Shopping Cart</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rs. 0</span>
+            </div>
+            <div class="cart-actions">
+                <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+                <button class="btn-continue" id="continueShopping">Continue Shopping</button>
+            </div>
+        </div>
     </div>
-    <div class="cart-actions">
-      <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
-      <button class="btn-continue" id="continueShopping">Continue Shopping</button>
-    </div>
-  </div>
-</div>
 
 <section class="container">
     <div class="row gy-4 py-5">
-        <!-- Product Cards -->
+        <!-- Product 1 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (1).jpg" class="card-img-top" alt="Product 1">
+                <img src="shoese pictures/pic (1).jpg" class="card-img-top" alt="Comfort Slip-On Loafers">
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">Comfort Slip-On Loafers For Women WSH-61034</h6>
                     <p class="card-text mb-2">Rs. 6,993</p>
@@ -174,11 +159,12 @@
             </div>
         </div>
         
+        <!-- Product 2 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (2).jpg" class="card-img-top" alt="Product 2">
+                <img src="shoese pictures/pic (2).jpg" class="card-img-top" alt="Classic Flat Pumps">
                 <div class="card-body d-flex flex-column">
-                  <h6 class="card-title">Comfort Slip-On Loafers For Women WSH-61034</h6>
+                  <h6 class="card-title">Classic Flat Pumps With Bow Detail WSH-61012</h6>
                   <p class="card-text mb-2">Rs. 9,990</p>
                   <div class="product-quantity">
                         <div class="quantity-selector">
@@ -202,16 +188,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="2" data-name="Comfort Slip-On Loafers For Women WSH-61034" data-price="9990" data-image="shoese pictures/pic (2).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="2" data-name="Classic Flat Pumps With Bow Detail WSH-61012" data-price="9990" data-image="shoese pictures/pic (2).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 3 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (3).jpg" class="card-img-top" alt="Product 3">
+                <img src="shoese pictures/pic (3).jpg" class="card-img-top" alt="Luxury Stiletto Heels">
                 <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Classic Flat Pumps With Bow Detail WSH-61012</h6>
+                     <h6 class="card-title">Luxury Stiletto Heels With Stone Embellishment WSH-61045</h6>
                      <p class="card-text mb-2">Rs. 7,990</p>
                      <div class="product-quantity">
                         <div class="quantity-selector">
@@ -235,16 +222,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="3" data-name="Classic Flat Pumps With Bow Detail WSH-61012" data-price="7990" data-image="shoese pictures/pic (3).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="3" data-name="Luxury Stiletto Heels With Stone Embellishment WSH-61045" data-price="7990" data-image="shoese pictures/pic (3).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 4 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (4).jpg" class="card-img-top" alt="Product 4">
+                <img src="shoese pictures/pic (4).jpg" class="card-img-top" alt="Trendy Casual Sneakers">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Luxury Stiletto Heels With Stone Embellishment WSH-61045</h6>
+                    <h6 class="card-title">Trendy Casual Sneakers With Mesh Design WSH-61056</h6>
                     <p class="card-text mb-2">Rs. 9,490</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -268,16 +256,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="4" data-name="Luxury Stiletto Heels With Stone Embellishment WSH-61045" data-price="9490" data-image="shoese pictures/pic (4).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="4" data-name="Trendy Casual Sneakers With Mesh Design WSH-61056" data-price="9490" data-image="shoese pictures/pic (4).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 5 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (5).jpg" class="card-img-top" alt="Product 5">
+                <img src="shoese pictures/pic (5).jpg" class="card-img-top" alt="Chic Wedge Sandals">
                 <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Trendy Casual Sneakers With Mesh Design WSH-61056</h6>
+                     <h6 class="card-title">Chic Wedge Sandals With Adjustable Strap WSH-61067</h6>
                      <p class="card-text mb-2">Rs. 6,293</p>
                      <div class="product-quantity">
                         <div class="quantity-selector">
@@ -301,16 +290,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="5" data-name="Trendy Casual Sneakers With Mesh Design WSH-61056" data-price="6293" data-image="shoese pictures/pic (5).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="5" data-name="Chic Wedge Sandals With Adjustable Strap WSH-61067" data-price="6293" data-image="shoese pictures/pic (5).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 6 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (6).jpg" class="card-img-top" alt="Product 6">
+                <img src="shoese pictures/pic (6).jpg" class="card-img-top" alt="Elegant Court Shoes">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Chic Wedge Sandals With Adjustable Strap WSH-61067</h6>
+                    <h6 class="card-title">Elegant Court Shoes With Pointed Toe WSH-61078</h6>
                     <p class="card-text mb-2">Rs. 2,394</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -334,16 +324,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="6" data-name="Chic Wedge Sandals With Adjustable Strap WSH-61067" data-price="2394" data-image="shoese pictures/pic (6).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="6" data-name="Elegant Court Shoes With Pointed Toe WSH-61078" data-price="2394" data-image="shoese pictures/pic (6).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 7 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (7).jpg" class="card-img-top" alt="Product 7">
+                <img src="shoese pictures/pic (7).jpg" class="card-img-top" alt="Designer Embroidered Khussa">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Elegant Court Shoes With Pointed Toe WSH-61078</h6>
+                    <h6 class="card-title">Designer Embroidered Khussa Flats WSH-61089</h6>
                     <p class="card-text mb-2">Rs. 9,490</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -367,16 +358,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="7" data-name="Elegant Court Shoes With Pointed Toe WSH-61078" data-price="9490" data-image="shoese pictures/pic (7).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="7" data-name="Designer Embroidered Khussa Flats WSH-61089" data-price="9490" data-image="shoese pictures/pic (7).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 8 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (8).jpg" class="card-img-top" alt="Product 8">
+                <img src="shoese pictures/pic (8).jpg" class="card-img-top" alt="Luxury Pearl Strap Heels">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Designer Embroidered Khussa Flats WSH-61089</h6>
+                    <h6 class="card-title">Luxury Pearl Strap Heels For Party Wear WSH-61100</h6>
                     <p class="card-text mb-2">Rs. 6,990</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -400,16 +392,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="8" data-name="Designer Embroidered Khussa Flats WSH-61089" data-price="6990" data-image="shoese pictures/pic (8).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="8" data-name="Luxury Pearl Strap Heels For Party Wear WSH-61100" data-price="6990" data-image="shoese pictures/pic (8).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 9 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (9).jpg" class="card-img-top" alt="Product 9">
+                <img src="shoese pictures/pic (9).jpg" class="card-img-top" alt="Soft Leather Moccasins">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Luxury Pearl Strap Heels For Party Wear WSH-61100</h6>
+                    <h6 class="card-title">Soft Leather Moccasins For Women WSH-61111</h6>
                     <p class="card-text mb-2">Rs. 6,993</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -433,16 +426,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="9" data-name="Luxury Pearl Strap Heels For Party Wear WSH-61100" data-price="6993" data-image="shoese pictures/pic (9).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="9" data-name="Soft Leather Moccasins For Women WSH-61111" data-price="6993" data-image="shoese pictures/pic (9).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 10 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (10).jpg" class="card-img-top" alt="Product 10">
+                <img src="shoese pictures/pic (10).jpg" class="card-img-top" alt="Trendy Ankle Strap Sandals">
                 <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Soft Leather Moccasins For Women WSH-61111</h6>
+                     <h6 class="card-title">Trendy Ankle Strap Sandals With Block Heel WSH-61122</h6>
                      <p class="card-text mb-2">Rs. 5,243</p>
                      <div class="product-quantity">
                         <div class="quantity-selector">
@@ -466,16 +460,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="10" data-name="Soft Leather Moccasins For Women WSH-61111" data-price="5243" data-image="shoese pictures/pic (10).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="10" data-name="Trendy Ankle Strap Sandals With Block Heel WSH-61122" data-price="5243" data-image="shoese pictures/pic (10).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 11 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (11).jpg" class="card-img-top" alt="Product 11">
+                <img src="shoese pictures/pic (11).jpg" class="card-img-top" alt="Comfort Everyday Ballet Flats">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Trendy Ankle Strap Sandals With Block Heel WSH-61122</h6>
+                    <h6 class="card-title">Comfort Everyday Ballet Flats WSH-61133</h6>
                     <p class="card-text mb-2">Rs. 4,543</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -499,16 +494,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="11" data-name="Trendy Ankle Strap Sandals With Block Heel WSH-61122" data-price="4543" data-image="shoese pictures/pic (11).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="11" data-name="Comfort Everyday Ballet Flats WSH-61133" data-price="4543" data-image="shoese pictures/pic (11).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 12 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (12).jpg" class="card-img-top" alt="Product 12">
+                <img src="shoese pictures/pic (12).jpg" class="card-img-top" alt="Casual Slip-On Sneakers">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Comfort Everyday Ballet Flats WSH-61133</h6>
+                    <h6 class="card-title">Casual Slip-On Sneakers For Women WSH-61155</h6>
                     <p class="card-text mb-2">Rs. 4,028</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -532,16 +528,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="12" data-name="Comfort Everyday Ballet Flats WSH-61133" data-price="4028" data-image="shoese pictures/pic (12).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="12" data-name="Casual Slip-On Sneakers For Women WSH-61155" data-price="4028" data-image="shoese pictures/pic (12).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 13 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (13).jpg" class="card-img-top" alt="Product 13">
+                <img src="shoese pictures/pic (13).jpg" class="card-img-top" alt="Stylish Transparent Heels">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Casual Slip-On Sneakers For Women WSH-61155</h6>
+                    <h6 class="card-title">Stylish Transparent Heels For Party Look WSH-61166</h6>
                     <p class="card-text mb-2">Rs. 5,317</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -565,16 +562,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="13" data-name="Casual Slip-On Sneakers For Women WSH-61155" data-price="5317" data-image="shoese pictures/pic (13).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="13" data-name="Stylish Transparent Heels For Party Look WSH-61166" data-price="5317" data-image="shoese pictures/pic (13).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 14 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (14).jpg" class="card-img-top" alt="Product 14">
+                <img src="shoese pictures/pic (14).jpg" class="card-img-top" alt="Elegant Lace-Up Oxford Shoes">
                 <div class="card-body d-flex flex-column">
-                   <h6 class="card-title">Stylish Transparent Heels For Party Look WSH-61166</h6>
+                   <h6 class="card-title">Elegant Lace-Up Oxford Shoes For Women WSH-61177</h6>
                    <p class="card-text mb-2">Rs. 2,796</p>
                    <div class="product-quantity">
                         <div class="quantity-selector">
@@ -598,16 +596,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="14" data-name="Stylish Transparent Heels For Party Look WSH-61166" data-price="2796" data-image="shoese pictures/pic (14).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="14" data-name="Elegant Lace-Up Oxford Shoes For Women WSH-61177" data-price="2796" data-image="shoese pictures/pic (14).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 15 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (15).jpg" class="card-img-top" alt="Product 15">
+                <img src="shoese pictures/pic (15).jpg" class="card-img-top" alt="Comfortable Foam Sandals">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Elegant Lace-Up Oxford Shoes For Women WSH-61177</h6>
+                    <h6 class="card-title">Comfortable Foam Sandals For Summer Wear WSH-61188</h6>
                     <p class="card-text mb-2">Rs. 4,872</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -631,16 +630,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="15" data-name="Elegant Lace-Up Oxford Shoes For Women WSH-61177" data-price="4872" data-image="shoese pictures/pic (15).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="15" data-name="Comfortable Foam Sandals For Summer Wear WSH-61188" data-price="4872" data-image="shoese pictures/pic (15).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 16 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (16).jpg" class="card-img-top" alt="Product 16">
+                <img src="shoese pictures/pic (16).jpg" class="card-img-top" alt="Luxury Bridal Heels">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Comfortable Foam Sandals For Summer Wear WSH-61188</h6>
+                    <h6 class="card-title">Luxury Bridal Heels With Stone Work WSH-61199</h6>
                     <p class="card-text mb-2">Rs. 4,220</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -664,16 +664,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="16" data-name="Comfortable Foam Sandals For Summer Wear WSH-61188" data-price="4220" data-image="shoese pictures/pic (16).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="16" data-name="Luxury Bridal Heels With Stone Work WSH-61199" data-price="4220" data-image="shoese pictures/pic (16).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 17 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (17).jpg" class="card-img-top" alt="Product 17">
+                <img src="shoese pictures/pic (17).jpg" class="card-img-top" alt="Classic Flat Slippers">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Luxury Bridal Heels With Stone Work WSH-61199</h6>
+                    <h6 class="card-title">Classic Flat Slippers With Minimal Design WSH-61210</h6>
                     <p class="card-text mb-2">Rs. 5,317</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -697,16 +698,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="17" data-name="Luxury Bridal Heels With Stone Work WSH-61199" data-price="5317" data-image="shoese pictures/pic (17).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="17" data-name="Classic Flat Slippers With Minimal Design WSH-61210" data-price="5317" data-image="shoese pictures/pic (17).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 18 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (18).jpg" class="card-img-top" alt="Product 18">
+                <img src="shoese pictures/pic (18).jpg" class="card-img-top" alt="Trendy Platform Sneakers">
                 <div class="card-body d-flex flex-column">
-                   <h6 class="card-title">Luxury Bridal Heels With Stone Work WSH-61199</h6>
+                   <h6 class="card-title">Trendy Platform Sneakers With Dual Tone WSH-61221</h6>
                    <p class="card-text mb-2">Rs. 2,796</p>
                    <div class="product-quantity">
                         <div class="quantity-selector">
@@ -730,16 +732,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="18" data-name="Luxury Bridal Heels With Stone Work WSH-61199" data-price="2796" data-image="shoese pictures/pic (18).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="18" data-name="Trendy Platform Sneakers With Dual Tone WSH-61221" data-price="2796" data-image="shoese pictures/pic (18).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 19 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (19).jpg" class="card-img-top" alt="Product 19">
+                <img src="shoese pictures/pic (19).jpg" class="card-img-top" alt="Elegant Evening Heels">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Classic Flat Slippers With Minimal Design WSH-61210</h6>
+                    <h6 class="card-title">Elegant Evening Heels With Crystal Details WSH-61232</h6>
                     <p class="card-text mb-2">Rs. 4,872</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -763,16 +766,17 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="19" data-name="Classic Flat Slippers With Minimal Design WSH-61210" data-price="4872" data-image="shoese pictures/pic (19).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="19" data-name="Elegant Evening Heels With Crystal Details WSH-61232" data-price="4872" data-image="shoese pictures/pic (19).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
         
+        <!-- Product 20 -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card h-100">
-                <img src="shoese pictures/pic (20).jpg" class="card-img-top" alt="Product 20">
+                <img src="shoese pictures/pic (20).jpg" class="card-img-top" alt="Casual Walking Shoes">
                 <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Trendy Platform Sneakers With Dual Tone WSH-61221</h6>
+                    <h6 class="card-title">Casual Walking Shoes With Memory Foam WSH-61243</h6>
                     <p class="card-text mb-2">Rs. 4,220</p>
                     <div class="product-quantity">
                         <div class="quantity-selector">
@@ -796,16 +800,15 @@
                             <option value="9">9</option>
                         </select>
                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="20" data-name="Trendy Platform Sneakers With Dual Tone WSH-61221" data-price="4220" data-image="shoese pictures/pic (20).jpg">Add To Cart</button>
+                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="20" data-name="Casual Walking Shoes With Memory Foam WSH-61243" data-price="4220" data-image="shoese pictures/pic (20).jpg">Add To Cart</button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-
-<!-- footer -->
-<section class="collection-intro py-5">
+    <!-- footer -->
+    <section class="collection-intro py-5" data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-10 mx-auto">
@@ -827,8 +830,7 @@
         </div>
     </section>
 
-
-     <footer class="bg-light py-5">
+    <footer class="bg-light py-5">
         <div class="container">
             <div class="row gy-4">
                 <div class="col-12 col-md-3">
@@ -861,6 +863,11 @@
                         <li><a href="#">INSTAGRAM</a></li>
                         <li><a href="#">WHATSAPP</a></li>
                     </ul>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="col-12 col-md-4">
                     <h6 class="fw-bold mb-3">SIGNUP FOR IDEAS NEWSLETTER</h6>
@@ -886,12 +893,11 @@
     
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 15l-6-6-6 6"/>
-        </svg>
+        <i class="fas fa-chevron-up"></i>
     </button>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/js files for retail/js for shoes.js"></script>
 </body>
 </html>

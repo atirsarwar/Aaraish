@@ -5,484 +5,470 @@
     <title>Fragrances</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/retail pages styles/fragrances styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/retail pages styles/fragrances styles.css">
 </head>
 <body>
-  <!-- PREMIUM PRELOADER -->
-  <div id="preloader">
-    <div class="preloader-content text-center">
-      <img src="../images/logo.png" alt="Logo" class="loader-logo" />
-      <div class="loading-text mt-3">Loading...</div>
-    </div>
-  </div>
-
-  <!-- NEW: Sticky Navigation -->
-  <nav class="navbar navbar-expand-lg bg-white py-3 sticky-nav">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="ideasNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
-            <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
-            <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
-            <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
-            <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
-            <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
-            <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
-            <li class="nav-item"><a class="nav-link active" href="fragrance.html">FRAGRANCES</a></li>
-          </ul>
-          <div class="d-flex align-items-center gap-3 ideas-icons">
-            <!-- Search Icon -->
-            <a href="#" class="text-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-            </a>
-            <!-- User Icon -->
-            <a href="#" class="text-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <circle cx="12" cy="8" r="4"></circle>
-                <path d="M21 20c0-4.418-3.582-8-8-8s-8 3.582-8 8"></path>
-              </svg>
-            </a>
-            <!-- Cart Icon -->
-            <a href="#" class="position-relative text-dark" id="cartIcon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <circle cx="9" cy="21" r="1"></circle>
-                <circle cx="20" cy="21" r="1"></circle>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-              </svg>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="cart-count">
-                0
-              </span>
-            </a>
-          </div>
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content text-center">
+            <img src="../images/logo.png" alt="Logo" class="loader-logo" />
+            <div class="loading-text mt-3">Loading...</div>
         </div>
     </div>
-  </nav>
 
-  <!-- Original Navigation (for initial display) -->
-  <nav class="navbar navbar-expand-lg bg-white py-3" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="ideasNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
-            <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
-            <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
-            <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
-            <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
-            <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
-            <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
-            <li class="nav-item"><a class="nav-link active" href="fragrance.html">FRAGRANCES</a></li>
-          </ul>
-          <div class="d-flex align-items-center gap-3 ideas-icons">
-            <!-- Search Icon -->
-            <a href="#" class="text-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
+    <!-- Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white py-3 sticky-nav" id="stickyNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
             </a>
-            <!-- User Icon -->
-            <a href="#" class="text-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <circle cx="12" cy="8" r="4"></circle>
-                <path d="M21 20c0-4.418-3.582-8-8-8s-8 3.582-8 8"></path>
-              </svg>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ideasNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
+                    <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="fragrance.html">FRAGRANCES</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 ideas-icons">
+                    <!-- Search Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <!-- User Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <!-- Cart Icon -->
+                    <a href="#" class="position-relative text-dark" id="cartIcon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark cart-badge" id="cart-count">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Original Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../images/logo.png" alt="Ideas" height="32" style="height: 50px;">
             </a>
-            <!-- Cart Icon -->
-            <a href="#" class="position-relative text-dark" id="cartIconMain">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <circle cx="9" cy="21" r="1"></circle>
-                <circle cx="20" cy="21" r="1"></circle>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-              </svg>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="cart-count-main">
-                0
-              </span>
-            </a>
-          </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ideasNav" aria-controls="ideasNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ideasNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ideas-menu">
+                    <li class="nav-item"><a class="nav-link" href="../retail.html">MAIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shoes.html">SHOES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="men .html">MEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bags.html">BAGS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jewlery.html">JEWELRY</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="fragrance.html">FRAGRANCES</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 ideas-icons">
+                    <!-- Search Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <!-- User Icon -->
+                    <a href="#" class="text-dark">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <!-- Cart Icon -->
+                    <a href="#" class="position-relative text-dark" id="cartIconMain">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark cart-badge" id="cart-count-main">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- NEW: Cart Modal -->
-  <div class="cart-modal-overlay" id="cartOverlay"></div>
-  <div class="cart-modal" id="cartModal">
-    <div class="p-4">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h4 class="mb-0">Your Cart</h4>
-        <button class="btn-close" id="closeCart"></button>
-      </div>
-      
-      <div id="cartItemsContainer">
-        <!-- Cart items will be dynamically inserted here -->
-      </div>
-      
-      <div class="cart-summary">
-        <div class="d-flex justify-content-between mb-2">
-          <span>Subtotal:</span>
-          <span id="cartSubtotal">Rs. 0</span>
+    <!-- Cart Modal -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Shopping Cart</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
         </div>
-        <div class="d-flex justify-content-between mb-3">
-          <span>Shipping:</span>
-          <span>Rs. 200</span>
+        <div class="cart-body" id="cartBody">
+            <!-- Cart items will be dynamically inserted here -->
         </div>
-        <div class="d-flex justify-content-between mb-4 fw-bold">
-          <span>Total:</span>
-          <span id="cartTotal">Rs. 200</span>
-        </div>
-        <button class="btn btn-dark w-100 mb-2" id="checkoutBtn">Checkout</button>
-        <button class="btn btn-outline-dark w-100" id="continueShopping">Continue Shopping</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- NEW: Scroll to Top Button -->
-  <div class="scroll-to-top" id="scrollToTop">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-    </svg>
-  </div>
-
-<section class="container">
-    <div class="row gy-4 py-5">
-        <!-- Product Cards -->
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (25).jpg" class="card-img-top" alt="Product 1">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Mystic Bloom Eau De Parfum WFR-71201</h6>
-                    <p class="card-text mb-2">Rs. 6,993</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="1" data-name="Mystic Bloom Eau De Parfum WFR-71201" data-price="6993" data-image="picture FRAGRANCES/pic (25).jpg">Add To Cart</button>
-                </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rs. 0</span>
             </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (2).jpg" class="card-img-top" alt="Product 2">
-                <div class="card-body d-flex flex-column">
-                  <h6 class="card-title">Velvet Touch Perfume Spray WFR-72812</h6>
-                  <p class="card-text mb-2">Rs. 9,990</p>
-                  <div class="quantity-selector mb-2">
-                      <button class="decrease-btn">-</button>
-                      <input type="number" class="quantity-input" value="1" min="1">
-                      <button class="increase-btn">+</button>
-                  </div>
-                  <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="2" data-name="Velvet Touch Perfume Spray WFR-72812" data-price="9990" data-image="picture FRAGRANCES/pic (2).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (3).jpg" class="card-img-top" alt="Product 3">
-                <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Royal Oud Intense Perfume WFR-80132</h6>
-                     <p class="card-text mb-2">Rs. 7,990</p>
-                     <div class="quantity-selector mb-2">
-                         <button class="decrease-btn">-</button>
-                         <input type="number" class="quantity-input" value="1" min="1">
-                         <button class="increase-btn">+</button>
-                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="3" data-name="Royal Oud Intense Perfume WFR-80132" data-price="7990" data-image="picture FRAGRANCES/pic (3).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (4).jpg" class="card-img-top" alt="Product 4">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Amber Nights Eau De Toilette WFR-93421</h6>
-                    <p class="card-text mb-2">Rs. 9,490</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="4" data-name="Amber Nights Eau De Toilette WFR-93421" data-price="9490" data-image="picture FRAGRANCES/pic (4).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (5).jpg" class="card-img-top" alt="Product 5">
-                <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Floral Grace Perfume For Women WFR-71988</h6>
-                     <p class="card-text mb-2">Rs. 6,293</p>
-                     <div class="quantity-selector mb-2">
-                         <button class="decrease-btn">-</button>
-                         <input type="number" class="quantity-input" value="1" min="1">
-                         <button class="increase-btn">+</button>
-                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="5" data-name="Floral Grace Perfume For Women WFR-71988" data-price="6293" data-image="picture FRAGRANCES/pic (5).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (6).jpg" class="card-img-top" alt="Product 6">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Signature Musk Eau De Parfum WFR-93104</h6>
-                    <p class="card-text mb-2">Rs. 2,394</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="6" data-name="Signature Musk Eau De Parfum WFR-93104" data-price="2394" data-image="picture FRAGRANCES/pic (6).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (7).jpg" class="card-img-top" alt="Product 7">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Elegant Rose Perfume Spray WFR-71532</h6>
-                    <p class="card-text mb-2">Rs. 9,490</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="7" data-name="Elegant Rose Perfume Spray WFR-71532" data-price="9490" data-image="picture FRAGRANCES/pic (7).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (8).jpg" class="card-img-top" alt="Product 8">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Golden Mirage Perfume WFR-84217</h6>
-                    <p class="card-text mb-2">Rs. 6,990</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="8" data-name="Golden Mirage Perfume WFR-84217" data-price="6990" data-image="picture FRAGRANCES/pic (8).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (9).jpg" class="card-img-top" alt="Product 9">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Ocean Mist Perfume For Women WFR-70981</h6>
-                    <p class="card-text mb-2">Rs. 6,993</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="9" data-name="Ocean Mist Perfume For Women WFR-70981" data-price="6993" data-image="picture FRAGRANCES/pic (9).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (10).jpg" class="card-img-top" alt="Product 10">
-                <div class="card-body d-flex flex-column">
-                     <h6 class="card-title">Divine Touch Eau De Parfum WFR-91124</h6>
-                     <p class="card-text mb-2">Rs. 5,243</p>
-                     <div class="quantity-selector mb-2">
-                         <button class="decrease-btn">-</button>
-                         <input type="number" class="quantity-input" value="1" min="1">
-                         <button class="increase-btn">+</button>
-                     </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="10" data-name="Divine Touch Eau De Parfum WFR-91124" data-price="5243" data-image="picture FRAGRANCES/pic (10).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (11).jpg" class="card-img-top" alt="Product 11">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Pure Elegance Perfume WFR-72314</h6>
-                    <p class="card-text mb-2">Rs. 4,543</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="11" data-name="Pure Elegance Perfume WFR-72314" data-price="4543" data-image="picture FRAGRANCES/pic (11).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (12).jpg" class="card-img-top" alt="Product 12">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Crystal Bloom Perfume WFR-83420</h6>
-                    <p class="card-text mb-2">Rs. 4,028</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="12" data-name="Crystal Bloom Perfume WFR-83420" data-price="4028" data-image="picture FRAGRANCES/pic (12).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (14).jpg" class="card-img-top" alt="Product 13">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Noir Desire Perfume WFR-92081</h6>
-                    <p class="card-text mb-2">Rs. 5,317</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="13" data-name="Noir Desire Perfume WFR-92081" data-price="5317" data-image="picture FRAGRANCES/pic (14).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (15).jpg" class="card-img-top" alt="Product 14">
-                <div class="card-body d-flex flex-column">
-                   <h6 class="card-title">Soft Petal Perfume Spray WFR-73914</h6>
-                   <p class="card-text mb-2">Rs. 2,796</p>
-                   <div class="quantity-selector mb-2">
-                       <button class="decrease-btn">-</button>
-                       <input type="number" class="quantity-input" value="1" min="1">
-                       <button class="increase-btn">+</button>
-                   </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="14" data-name="Soft Petal Perfume Spray WFR-73914" data-price="2796" data-image="picture FRAGRANCES/pic (15).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (16).jpg" class="card-img-top" alt="Product 15">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Royal Blossom Perfume WFR-81592</h6>
-                    <p class="card-text mb-2">Rs. 4,872</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="15" data-name="Royal Blossom Perfume WFR-81592" data-price="4872" data-image="picture FRAGRANCES/pic (16).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (17).jpg" class="card-img-top" alt="Product 16">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Enchant Mist Perfume WFR-90431</h6>
-                    <p class="card-text mb-2">Rs. 4,220</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="16" data-name="Enchant Mist Perfume WFR-90431" data-price="4220" data-image="picture FRAGRANCES/pic (17).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (18).jpg" class="card-img-top" alt="Product 17">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Midnight Aura Eau De Parfum WFR-74125</h6>
-                    <p class="card-text mb-2">Rs. 5,317</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="17" data-name="Midnight Aura Eau De Parfum WFR-74125" data-price="5317" data-image="picture FRAGRANCES/pic (18).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (19).jpg" class="card-img-top" alt="Product 18">
-                <div class="card-body d-flex flex-column">
-                   <h6 class="card-title">Golden Dream Perfume For Women WFR-81763</h6>
-                   <p class="card-text mb-2">Rs. 2,796</p>
-                   <div class="quantity-selector mb-2">
-                       <button class="decrease-btn">-</button>
-                       <input type="number" class="quantity-input" value="1" min="1">
-                       <button class="increase-btn">+</button>
-                   </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="18" data-name="Golden Dream Perfume For Women WFR-81763" data-price="2796" data-image="picture FRAGRANCES/pic (19).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (21).jpg" class="card-img-top" alt="Product 19">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Amber Luxe Perfume For Women WFR-90214</h6>
-                    <p class="card-text mb-2">Rs. 4,872</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="19" data-name="Amber Luxe Perfume For Women WFR-90214" data-price="4872" data-image="picture FRAGRANCES/pic (21).jpg">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card product-card h-100">
-                <img src="picture FRAGRANCES/pic (23).jpg" class="card-img-top" alt="Product 20">
-                <div class="card-body d-flex flex-column">
-                    <h6 class="card-title">Bloom Essence Perfume Spray WFR-84109</h6>
-                    <p class="card-text mb-2">Rs. 4,220</p>
-                    <div class="quantity-selector mb-2">
-                        <button class="decrease-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1">
-                        <button class="increase-btn">+</button>
-                    </div>
-                    <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="20" data-name="Bloom Essence Perfume Spray WFR-84109" data-price="4220" data-image="picture FRAGRANCES/pic (23).jpg">Add To Cart</button>
-                </div>
+            <div class="cart-actions">
+                <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+                <button class="btn-continue" id="continueShopping">Continue Shopping</button>
             </div>
         </div>
     </div>
-</section>
 
+    <section class="container">
+        <div class="row gy-4 py-5">
+            <!-- Product 1 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (1).jpg" class="card-img-top" alt="Mystic Bloom Eau De Parfum">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Mystic Bloom Eau De Parfum WFR-71201</h6>
+                        <p class="card-text mb-2">Rs. 6,993</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="1" data-name="Mystic Bloom Eau De Parfum WFR-71201" data-price="6993" data-image="picture FRAGRANCES/pic (1).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (2).jpg" class="card-img-top" alt="Velvet Touch Perfume Spray">
+                    <div class="card-body d-flex flex-column">
+                      <h6 class="card-title">Velvet Touch Perfume Spray WFR-72812</h6>
+                      <p class="card-text mb-2">Rs. 9,990</p>
+                      <div class="quantity-selector">
+                          <button class="decrease-btn">-</button>
+                          <input type="number" class="quantity-input" value="1" min="1">
+                          <button class="increase-btn">+</button>
+                      </div>
+                      <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="2" data-name="Velvet Touch Perfume Spray WFR-72812" data-price="9990" data-image="picture FRAGRANCES/pic (2).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (3).jpg" class="card-img-top" alt="Royal Oud Intense Perfume">
+                    <div class="card-body d-flex flex-column">
+                         <h6 class="card-title">Royal Oud Intense Perfume WFR-80132</h6>
+                         <p class="card-text mb-2">Rs. 7,990</p>
+                         <div class="quantity-selector">
+                             <button class="decrease-btn">-</button>
+                             <input type="number" class="quantity-input" value="1" min="1">
+                             <button class="increase-btn">+</button>
+                         </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="3" data-name="Royal Oud Intense Perfume WFR-80132" data-price="7990" data-image="picture FRAGRANCES/pic (3).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (4).jpg" class="card-img-top" alt="Amber Nights Eau De Toilette">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Amber Nights Eau De Toilette WFR-93421</h6>
+                        <p class="card-text mb-2">Rs. 9,490</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="4" data-name="Amber Nights Eau De Toilette WFR-93421" data-price="9490" data-image="picture FRAGRANCES/pic (4).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (5).jpg" class="card-img-top" alt="Floral Grace Perfume">
+                    <div class="card-body d-flex flex-column">
+                         <h6 class="card-title">Floral Grace Perfume For Women WFR-71988</h6>
+                         <p class="card-text mb-2">Rs. 6,293</p>
+                         <div class="quantity-selector">
+                             <button class="decrease-btn">-</button>
+                             <input type="number" class="quantity-input" value="1" min="1">
+                             <button class="increase-btn">+</button>
+                         </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="5" data-name="Floral Grace Perfume For Women WFR-71988" data-price="6293" data-image="picture FRAGRANCES/pic (5).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="350">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (6).jpg" class="card-img-top" alt="Signature Musk Eau De Parfum">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Signature Musk Eau De Parfum WFR-93104</h6>
+                        <p class="card-text mb-2">Rs. 2,394</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="6" data-name="Signature Musk Eau De Parfum WFR-93104" data-price="2394" data-image="picture FRAGRANCES/pic (6).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 7 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (7).jpg" class="card-img-top" alt="Elegant Rose Perfume Spray">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Elegant Rose Perfume Spray WFR-71532</h6>
+                        <p class="card-text mb-2">Rs. 9,490</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="7" data-name="Elegant Rose Perfume Spray WFR-71532" data-price="9490" data-image="picture FRAGRANCES/pic (7).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (8).jpg" class="card-img-top" alt="Golden Mirage Perfume">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Golden Mirage Perfume WFR-84217</h6>
+                        <p class="card-text mb-2">Rs. 6,990</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="8" data-name="Golden Mirage Perfume WFR-84217" data-price="6990" data-image="picture FRAGRANCES/pic (8).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 9 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (9).jpg" class="card-img-top" alt="Ocean Mist Perfume">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Ocean Mist Perfume For Women WFR-70981</h6>
+                        <p class="card-text mb-2">Rs. 6,993</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="9" data-name="Ocean Mist Perfume For Women WFR-70981" data-price="6993" data-image="picture FRAGRANCES/pic (9).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 10 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="550">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (10).jpg" class="card-img-top" alt="Divine Touch Eau De Parfum">
+                    <div class="card-body d-flex flex-column">
+                         <h6 class="card-title">Divine Touch Eau De Parfum WFR-91124</h6>
+                         <p class="card-text mb-2">Rs. 5,243</p>
+                         <div class="quantity-selector">
+                             <button class="decrease-btn">-</button>
+                             <input type="number" class="quantity-input" value="1" min="1">
+                             <button class="increase-btn">+</button>
+                         </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="10" data-name="Divine Touch Eau De Parfum WFR-91124" data-price="5243" data-image="picture FRAGRANCES/pic (10).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 11 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (11).jpg" class="card-img-top" alt="Pure Elegance Perfume">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Pure Elegance Perfume WFR-72314</h6>
+                        <p class="card-text mb-2">Rs. 4,543</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="11" data-name="Pure Elegance Perfume WFR-72314" data-price="4543" data-image="picture FRAGRANCES/pic (11).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 12 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="650">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (12).jpg" class="card-img-top" alt="Crystal Bloom Perfume">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Crystal Bloom Perfume WFR-83420</h6>
+                        <p class="card-text mb-2">Rs. 4,028</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="12" data-name="Crystal Bloom Perfume WFR-83420" data-price="4028" data-image="picture FRAGRANCES/pic (12).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 13 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="700">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (13).jpg" class="card-img-top" alt="Noir Desire Perfume">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Noir Desire Perfume WFR-92081</h6>
+                        <p class="card-text mb-2">Rs. 5,317</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="13" data-name="Noir Desire Perfume WFR-92081" data-price="5317" data-image="picture FRAGRANCES/pic (13).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 14 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="750">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (14).jpg" class="card-img-top" alt="Soft Petal Perfume Spray">
+                    <div class="card-body d-flex flex-column">
+                       <h6 class="card-title">Soft Petal Perfume Spray WFR-73914</h6>
+                       <p class="card-text mb-2">Rs. 2,796</p>
+                       <div class="quantity-selector">
+                           <button class="decrease-btn">-</button>
+                           <input type="number" class="quantity-input" value="1" min="1">
+                           <button class="increase-btn">+</button>
+                       </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="14" data-name="Soft Petal Perfume Spray WFR-73914" data-price="2796" data-image="picture FRAGRANCES/pic (14).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 15 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="800">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (15).jpg" class="card-img-top" alt="Royal Blossom Perfume">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Royal Blossom Perfume WFR-81592</h6>
+                        <p class="card-text mb-2">Rs. 4,872</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="15" data-name="Royal Blossom Perfume WFR-81592" data-price="4872" data-image="picture FRAGRANCES/pic (15).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 16 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="850">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (16).jpg" class="card-img-top" alt="Enchant Mist Perfume">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Enchant Mist Perfume WFR-90431</h6>
+                        <p class="card-text mb-2">Rs. 4,220</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="16" data-name="Enchant Mist Perfume WFR-90431" data-price="4220" data-image="picture FRAGRANCES/pic (16).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 17 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="900">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (17).jpg" class="card-img-top" alt="Midnight Aura Eau De Parfum">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Midnight Aura Eau De Parfum WFR-74125</h6>
+                        <p class="card-text mb-2">Rs. 5,317</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="17" data-name="Midnight Aura Eau De Parfum WFR-74125" data-price="5317" data-image="picture FRAGRANCES/pic (17).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 18 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="950">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (18).jpg" class="card-img-top" alt="Golden Dream Perfume">
+                    <div class="card-body d-flex flex-column">
+                       <h6 class="card-title">Golden Dream Perfume For Women WFR-81763</h6>
+                       <p class="card-text mb-2">Rs. 2,796</p>
+                       <div class="quantity-selector">
+                           <button class="decrease-btn">-</button>
+                           <input type="number" class="quantity-input" value="1" min="1">
+                           <button class="increase-btn">+</button>
+                       </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="18" data-name="Golden Dream Perfume For Women WFR-81763" data-price="2796" data-image="picture FRAGRANCES/pic (18).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 19 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="1000">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (19).jpg" class="card-img-top" alt="Amber Luxe Perfume">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Amber Luxe Perfume For Women WFR-90214</h6>
+                        <p class="card-text mb-2">Rs. 4,872</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="19" data-name="Amber Luxe Perfume For Women WFR-90214" data-price="4872" data-image="picture FRAGRANCES/pic (19).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 20 -->
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="1050">
+                <div class="card product-card h-100">
+                    <img src="picture FRAGRANCES/pic (20).jpg" class="card-img-top" alt="Bloom Essence Perfume Spray">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title">Bloom Essence Perfume Spray WFR-84109</h6>
+                        <p class="card-text mb-2">Rs. 4,220</p>
+                        <div class="quantity-selector">
+                            <button class="decrease-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="increase-btn">+</button>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm w-100 add-to-cart" data-id="20" data-name="Bloom Essence Perfume Spray WFR-84109" data-price="4220" data-image="picture FRAGRANCES/pic (20).jpg">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- footer -->
-<section class="collection-intro py-5">
+    <!-- footer -->
+    <section class="collection-intro py-5" data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-10 mx-auto">
@@ -504,8 +490,7 @@
         </div>
     </section>
 
-
-     <footer class="bg-light py-5">
+    <footer class="bg-light py-5">
         <div class="container">
             <div class="row gy-4">
                 <div class="col-12 col-md-3">
@@ -538,6 +523,11 @@
                         <li><a href="#">INSTAGRAM</a></li>
                         <li><a href="#">WHATSAPP</a></li>
                     </ul>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="col-12 col-md-4">
                     <h6 class="fw-bold mb-3">SIGNUP FOR IDEAS NEWSLETTER</h6>
@@ -561,7 +551,13 @@
         </div>
     </footer>
     
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/js files for retail/js for fragrances.js"></script>
 </body>
 </html>
